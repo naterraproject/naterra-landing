@@ -5,412 +5,215 @@
     <title>Naterra – La carte vivante des usages de la nature</title>
     <meta
       name="description"
-      content="Naterra est la carte vivante des usages de la nature : une infrastructure commune pour cohabiter en sécurité, signaler ce qui compte et mieux connaître les milieux naturels."
+      content="Naterra est en construction. Une carte vivante pour mieux partager les usages de la nature et cohabiter en sécurité."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Naterra – La carte vivante des usages de la nature" />
-    <meta
-      property="og:description"
-      content="Une même carte pour les usages outdoor, la ruralité, les gestionnaires et la science citoyenne. Cohabitation, sécurité, signaux terrain, connaissance des milieux."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://naterra.io" />
-    <meta property="og:image" content="https://naterra.io/og-image.png" />
-
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <!-- ====== HEADER ====== -->
+    <!-- HEADER -->
     <header class="nt-header">
-      <div class="nt-header-inner">
+      <div class="nt-shell nt-header-inner">
         <div class="nt-logo">
           <span class="nt-logo-mark">N</span>
           <span class="nt-logo-text">Naterra</span>
         </div>
-
         <nav class="nt-nav">
-          <a href="#promesse" class="nt-nav-link">Promesse</a>
-          <a href="#app" class="nt-nav-link">Le produit</a>
-          <a href="#signaux" class="nt-nav-link">Signaux</a>
-          <a href="#modes" class="nt-nav-link">Modes</a>
-          <a href="#confiance" class="nt-nav-link">Confiance</a>
+          <a href="#about" class="nt-nav-link">Le projet</a>
+          <a href="#who" class="nt-nav-link">Pour qui</a>
+          <a href="#contact" class="nt-nav-link">Contact</a>
         </nav>
-
-        <div class="nt-header-cta">
-          <a href="#beta" class="nt-btn nt-btn-outline nt-btn-small">
-            Rejoindre la bêta
-          </a>
-        </div>
+        <a
+          href="mailto:hello@naterra.io?subject=Contact%20Naterra"
+          class="nt-header-link"
+        >
+          hello@naterra.io
+        </a>
       </div>
     </header>
 
-    <!-- ====== HERO ====== -->
+    <!-- HERO -->
     <main>
       <section class="nt-hero">
-        <div class="nt-hero-inner">
+        <div class="nt-shell nt-hero-grid">
           <div class="nt-hero-text">
-            <p class="nt-pill">
-              V1 en construction · tests terrain avec usagers outdoor & chasse
-            </p>
+            <p class="nt-pill">En construction · lancement progressif</p>
             <h1 class="nt-hero-title">
               La carte vivante<br />
-              <span class="nt-hero-highlight">des usages de la nature</span>
+              des usages de la nature.
             </h1>
             <p class="nt-hero-subtitle">
-              Naterra est l’infrastructure commune où se croisent intelligemment
-              les usages outdoor, la ruralité, les gestionnaires et la science.
-              Une seule carte pour se situer, cohabiter en sécurité, signaler ce qui
-              compte et mieux protéger les milieux naturels.
+              Une seule carte pour voir ce qui se passe vraiment dehors :
+              activités, zones sensibles, signaux de sécurité. Pensée pour
+              partager les territoires, pas les fragmenter.
             </p>
 
             <div class="nt-hero-actions">
-              <a href="#beta" class="nt-btn nt-btn-primary">
-                Rejoindre la bêta privée
+              <a
+                href="mailto:hello@naterra.io?subject=Contact%20Naterra&body=Bonjour%2C%0A%0AJe%20souhaite%20en%20savoir%20plus%20sur%20Naterra.%0A%0AUsage%20(outdoor%2C%20territoire%2C%20enjeux...)%20%3A%0A%0AMerci%20!"
+                class="nt-btn nt-btn-primary"
+              >
+                Écrire à l’équipe
               </a>
-              <a href="#app" class="nt-btn nt-btn-ghost">
-                Comprendre le produit
-              </a>
+              <a href="#about" class="nt-btn nt-btn-ghost">En savoir plus</a>
             </div>
 
-            <ul class="nt-hero-bullets">
-              <li>Pas une app de sport. Pas une app de chasse. Pas une app scientifique.</li>
-              <li>La couche commune où tous ces usages se parlent.</li>
+            <p class="nt-hero-note">
+              Pas encore d’app publique. Naterra se construit avec quelques
+              territoires pilotes.
+            </p>
+          </div>
+
+          <div class="nt-hero-visual">
+            <div class="nt-device">
+              <div class="nt-device-border">
+                <div class="nt-device-notch"></div>
+                <div class="nt-device-screen">
+                  <div class="nt-device-label">Concept Naterra</div>
+                  <div class="nt-device-map">
+                    <div class="nt-map-ring nt-map-ring-main"></div>
+                    <div class="nt-map-ring nt-map-ring-soft"></div>
+                    <div class="nt-map-dot nt-map-dot-red"></div>
+                    <div class="nt-map-dot nt-map-dot-amber"></div>
+                    <div class="nt-map-dot nt-map-dot-green"></div>
+                  </div>
+                  <div class="nt-device-caption">
+                    <span>Carte live</span>
+                    <span>Signaux terrain</span>
+                    <span>Cohabitation</span>
+                  </div>
+                </div>
+              </div>
+              <p class="nt-device-footnote">
+                Illustration conceptuelle · interface susceptible d’évoluer
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION : LE PROJET -->
+      <section id="about" class="nt-section">
+        <div class="nt-shell">
+          <div class="nt-section-header">
+            <h2>Ce que Naterra rend possible.</h2>
+            <p>
+              Naterra n’est ni une app de sport, ni une app de chasse, ni une
+              app scientifique. C’est une couche commune où ces usages se
+              rencontrent.
+            </p>
+          </div>
+
+          <div class="nt-card-grid">
+            <article class="nt-card">
+              <h3>Voir</h3>
+              <p>
+                Une carte qui montre où l’on se déplace, mais aussi ce qui
+                s’y joue&nbsp;: événements, travaux, troupeaux, zones de
+                quiétude.
+              </p>
+            </article>
+            <article class="nt-card">
+              <h3>Cohabiter</h3>
+              <p>
+                Réunir pratiquants outdoor, ruralité, clubs et gestionnaires
+                autour de la même vue. Moins de surprises, moins de tensions,
+                plus de sécurité.
+              </p>
+            </article>
+            <article class="nt-card">
+              <h3>Comprendre</h3>
+              <p>
+                Signaux terrain, observations, données environnementales pour
+                éclairer les décisions, sans compliquer la vie des usagers.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION : POUR QUI -->
+      <section id="who" class="nt-section nt-section-alt">
+        <div class="nt-shell">
+          <div class="nt-section-header">
+            <h2>Pensée pour plusieurs mondes, une seule carte.</h2>
+            <p>
+              Naterra vise un équilibre entre simplicité d’usage sur le terrain
+              et données crédibles pour les organisations.
+            </p>
+          </div>
+
+          <div class="nt-card-grid nt-card-grid-2">
+            <article class="nt-card">
+              <h3>Pratiquants outdoor</h3>
+              <p>
+                Randonnée, trail, VTT, cheval. Savoir où aller, et où éviter,
+                en fonction des activités en cours et des zones sensibles.
+              </p>
+            </article>
+            <article class="nt-card">
+              <h3>Organisateurs & gestionnaires</h3>
+              <p>
+                Chasses collectives, clubs, collectivités, foresters. Mieux
+                préparer, expliquer et tracer ce qui se passe sur un
+                territoire.
+              </p>
+            </article>
+            <article class="nt-card">
+              <h3>Science & données environnementales</h3>
+              <p>
+                Projets de science citoyenne, observatoires, recherche. Des
+                signalements structurés, exploitables dans le temps.
+              </p>
+            </article>
+            <article class="nt-card">
+              <h3>Ruralité & agriculture</h3>
+              <p>
+                Rendre plus visibles les usages du quotidien&nbsp;: travaux,
+                troupeaux, contraintes de terrain, périodes sensibles.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION : STATUT + CTA -->
+      <section id="contact" class="nt-section">
+        <div class="nt-shell">
+          <div class="nt-status">
+            <h2>Naterra, aujourd’hui.</h2>
+            <ul>
+              <li>Produit en développement, pas encore ouvert au grand public.</li>
+              <li>
+                Premiers tests menés avec des territoires pilotes
+                (chasse, clubs outdoor, gestionnaires).
+              </li>
+              <li>
+                Priorité&nbsp;: une expérience simple sur le terrain avant toute
+                sophistication.
+              </li>
             </ul>
           </div>
 
-          <div class="nt-hero-mockup">
-            <div class="nt-phone">
-              <div class="nt-phone-notch"></div>
-              <div class="nt-phone-screen">
-                <div class="nt-phone-tag">Carte live · Mode Explorer</div>
-                <div class="nt-phone-map">
-                  <div class="nt-map-dot nt-map-dot-red"></div>
-                  <div class="nt-map-dot nt-map-dot-amber"></div>
-                  <div class="nt-map-dot nt-map-dot-green"></div>
-                </div>
-                <div class="nt-phone-card">
-                  <p class="nt-phone-card-title">Signaux à proximité</p>
-                  <p class="nt-phone-card-line">Danger immédiat · 250 m</p>
-                  <p class="nt-phone-card-line">Activité en cours · territoire voisin</p>
-                </div>
-                <div class="nt-phone-bottom">
-                  <span class="nt-phone-dot"></span>
-                  <span class="nt-phone-dot"></span>
-                  <span class="nt-phone-dot"></span>
-                </div>
-              </div>
-            </div>
-            <p class="nt-hero-footnote">
-              Une app mobile-first, centrée sur la carte et le terrain · React · Supabase · Leaflet + OSM
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ====== PROMESSE ====== -->
-      <section id="promesse" class="nt-section nt-section-alt">
-        <div class="nt-section-inner">
-          <h2 class="nt-section-title">La promesse produit</h2>
-          <p class="nt-section-intro">
-            Naterra est la carte vivante des usages de la nature. Elle permet à tous les
-            usagers de la nature – pratiquants outdoor, acteurs de la ruralité, gestionnaires,
-            scientifiques – de partager une même représentation du terrain.
-          </p>
-
-          <div class="nt-grid nt-grid-4">
-            <article class="nt-card nt-card-soft">
-              <h3 class="nt-card-title">Se situer</h3>
-              <p class="nt-card-text">
-                Comprendre ce qui se passe autour de soi : activités en cours, zones sensibles,
-                signaux récents, territoires proches.
-              </p>
-            </article>
-
-            <article class="nt-card nt-card-soft">
-              <h3 class="nt-card-title">Cohabiter en sécurité</h3>
-              <p class="nt-card-text">
-                Réduire les frictions et les risques grâce à une carte partagée des usages
-                (chasse, événements, travaux, troupeaux…).
-              </p>
-            </article>
-
-            <article class="nt-card nt-card-soft">
-              <h3 class="nt-card-title">Signaler ce qui compte</h3>
-              <p class="nt-card-text">
-                Utiliser un langage commun de signaux universels pour décrire dangers,
-                usages, observations et données environnementales.
-              </p>
-            </article>
-
-            <article class="nt-card nt-card-soft">
-              <h3 class="nt-card-title">Mieux protéger les milieux</h3>
-              <p class="nt-card-text">
-                Produire des données fiables, anonymisées et exploitables pour la gestion
-                des territoires et la science citoyenne.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ====== LE PRODUIT : 4 ONGLET + BOUTON ====== -->
-      <section id="app" class="nt-section">
-        <div class="nt-section-inner">
-          <h2 class="nt-section-title">Une app centrée sur la carte, pensée pour le terrain</h2>
-          <p class="nt-section-intro">
-            L’expérience Naterra se résume à quatre onglets simples et un bouton central
-            toujours accessible depuis la carte. Tout commence et finit sur la carte.
-          </p>
-
-          <div class="nt-grid nt-grid-4 nt-grid-tight">
-            <article class="nt-card nt-card-soft nt-tab-card">
-              <p class="nt-tab-label">🗺️ Carte</p>
-              <h3 class="nt-card-title">Écran principal (80&nbsp;% du temps)</h3>
-              <p class="nt-card-text">
-                Carte interactive, position de l’utilisateur (opt-in), couches dynamiques,
-                zones & territoires, alertes intelligentes selon le contexte, la distance
-                et ton mode actif.
-              </p>
-            </article>
-
-            <article class="nt-card nt-card-soft nt-tab-card">
-              <p class="nt-tab-label">⚡ Actions</p>
-              <h3 class="nt-card-title">Ce que je fais</h3>
-              <p class="nt-card-text">
-                Mes sorties en cours et passées, mes événements, mes signaux et observations,
-                les brouillons hors-ligne qui se synchronisent plus tard.
-              </p>
-            </article>
-
-            <article class="nt-card nt-card-soft nt-tab-card">
-              <p class="nt-tab-label">🧩 Territoires</p>
-              <h3 class="nt-card-title">Le pont avec les gestionnaires</h3>
-              <p class="nt-card-text">
-                Territoires que je gère ou suis, règles associées (horaires, alertes,
-                visibilité), activités en cours et prévues, historique agrégé.
-              </p>
-            </article>
-
-            <article class="nt-card nt-card-soft nt-tab-card">
-              <p class="nt-tab-label">👤 Moi</p>
-              <h3 class="nt-card-title">Profil & confiance</h3>
-              <p class="nt-card-text">
-                Modes actifs (Explorer, Événement, Science), préférences de confidentialité,
-                connexions (clubs, assos, partenaires) et confiance / réputation.
-              </p>
-            </article>
-          </div>
-
-          <div class="nt-plus-wrapper">
-            <div class="nt-plus-circle">+</div>
-            <div class="nt-plus-text">
-              <h3>Un bouton central universel</h3>
+          <div class="nt-contact">
+            <div class="nt-contact-text">
+              <h3>Envie d’en parler&nbsp;?</h3>
               <p>
-                Depuis la carte, un seul geste pour <strong>signaler</strong>, 
-                <strong>démarrer une sortie</strong>, <strong>créer un événement</strong> 
-                ou <strong>faire une observation</strong> selon un protocole défini.
+                Tu gères un territoire, un club, une association ou un projet de
+                données environnementales&nbsp;? On prend le temps d’écouter
+                les besoins avant de promettre une date de lancement.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ====== SIGNAUX MVP ====== -->
-      <section id="signaux" class="nt-section nt-section-alt">
-        <div class="nt-section-inner">
-          <h2 class="nt-section-title">Un langage commun de signaux</h2>
-          <p class="nt-section-intro">
-            Tous les cas d’usage de Naterra passent par une quinzaine de signaux
-            universels. Chaque signal est un point ou une zone, avec un type, une durée,
-            une visibilité et éventuellement une photo. Le même langage pour tout le monde.
-          </p>
-
-          <div class="nt-grid nt-grid-3">
-            <article class="nt-card nt-card-soft nt-signal-card nt-signal-red">
-              <h3 class="nt-card-title">🔴 Sécurité & info terrain</h3>
-              <ul class="nt-signal-list">
-                <li>Danger immédiat (arbre, éboulement, route)</li>
-                <li>Chemin impraticable / dégradé</li>
-                <li>Incident / besoin d’aide (soft)</li>
-                <li>Zone à éviter temporairement</li>
-                <li>Activité en cours (chasse, travaux, événement)</li>
-              </ul>
-            </article>
-
-            <article class="nt-card nt-card-soft nt-signal-card nt-signal-green">
-              <h3 class="nt-card-title">🟢 Cohabitation & usages</h3>
-              <ul class="nt-signal-list">
-                <li>Passage d’engins / travaux agricoles</li>
-                <li>Zone sensible (faune, nidification)</li>
-                <li>Chien de protection / troupeau</li>
-                <li>Conflit d’usage potentiel</li>
-              </ul>
-            </article>
-
-            <article class="nt-card nt-card-soft nt-signal-card nt-signal-blue">
-              <h3 class="nt-card-title">🌍 Écologie & science citoyenne</h3>
-              <ul class="nt-signal-list">
-                <li>Pollution / déchet</li>
-                <li>Observation faune / flore</li>
-                <li>Cours d’eau – photo / niveau</li>
-                <li>Espèce invasive</li>
-                <li>Dégâts cultures / pression faune</li>
-              </ul>
-            </article>
-          </div>
-
-          <p class="nt-section-footnote">
-            👉 Même objet technique, formulaires adaptés selon le contexte (Explorer, Événement, Science).
-          </p>
-        </div>
-      </section>
-
-      <!-- ====== MODES ====== -->
-      <section id="modes" class="nt-section">
-        <div class="nt-section-inner">
-          <h2 class="nt-section-title">3 modes intelligents, une seule app</h2>
-          <p class="nt-section-intro">
-            Les “modes” ne sont pas des apps différentes, mais des filtres intelligents
-            sur la même carte et les mêmes signaux. L’utilisateur garde un produit unique,
-            les données restent cohérentes.
-          </p>
-
-          <div class="nt-grid nt-grid-3">
-            <article class="nt-card nt-card-soft nt-mode-card">
-              <p class="nt-mode-label">🧭 Mode Explorer</p>
-              <h3 class="nt-card-title">Le mode par défaut</h3>
-              <p class="nt-card-text">
-                Dangers, conditions de terrain, zones sensibles, déchets et pollution,
-                alertes de proximité. Pensé pour le grand public, les familles, la rando,
-                le VTT, le cheval.
-              </p>
-            </article>
-
-            <article class="nt-card nt-card-soft nt-mode-card">
-              <p class="nt-mode-label">🎯 Mode Événement</p>
-              <h3 class="nt-card-title">Organiser sur le terrain</h3>
-              <p class="nt-card-text">
-                Participants en live, rôles, zones réglementées, journal automatique
-                de l’événement. Pour les chasses collectives, courses nature, clubs outdoor.
-              </p>
-            </article>
-
-            <article class="nt-card nt-card-soft nt-mode-card">
-              <p class="nt-mode-label">🔬 Mode Science</p>
-              <h3 class="nt-card-title">Données robustes</h3>
-              <p class="nt-card-text">
-                Protocoles normés, champs obligatoires, validation par des partenaires,
-                pas de bruit hors sujet. Pour la biodiversité, l’eau, le climat, les projets INRAE-like.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ====== CONFIANCE & PRIVACY ====== -->
-      <section id="confiance" class="nt-section nt-section-alt">
-        <div class="nt-section-inner">
-          <h2 class="nt-section-title">Privacy & confiance, non négociables</h2>
-          <p class="nt-section-intro">
-            Sans règles claires de confidentialité et de qualité des données, Naterra
-            deviendrait bruyante – donc inutile. La privacy-by-design et la confiance
-            sont intégrées au cœur du produit.
-          </p>
-
-          <div class="nt-grid nt-grid-2">
-            <article class="nt-card nt-card-soft">
-              <h3 class="nt-card-title">🔐 Privacy-by-design</h3>
-              <ul class="nt-signal-list">
-                <li>Précision géographique variable (exacte, floutée, zone seulement).</li>
-                <li>Live map 100&nbsp;% opt-in, partage contrôlé.</li>
-                <li>Données sensibles avec délai de publication possible.</li>
-                <li>Visibilité restreinte par groupe ou par territoire.</li>
-                <li>Exports toujours agrégés et anonymisés par défaut.</li>
-              </ul>
-            </article>
-
-            <article class="nt-card nt-card-soft">
-              <h3 class="nt-card-title">✅ Qualité & confiance</h3>
-              <ul class="nt-signal-list">
-                <li>Signaux avec durée de vie limitée, pour éviter le bruit.</li>
-                <li>Confirmation communautaire (“toujours valable ?”).</li>
-                <li>Profils vérifiés pour assos, collectivités, fédés.</li>
-                <li>Score de fiabilité léger, invisible mais actif.</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ====== POUR QUI ? ====== -->
-      <section class="nt-section">
-        <div class="nt-section-inner">
-          <h2 class="nt-section-title">Pourquoi ce produit est “juste”</h2>
-          <p class="nt-section-intro">
-            Naterra vise un équilibre délicat : rester simple pour l’usager terrain,
-            tout en étant suffisamment structuré pour les organisations et la science.
-          </p>
-
-          <div class="nt-grid nt-grid-3 nt-grid-tight">
-            <article class="nt-card nt-card-soft">
-              <h3 class="nt-card-title">Pour l’utilisateur terrain</h3>
-              <p class="nt-card-text">
-                Une seule carte, des signaux simples, des modes clairs. Pas besoin de
-                comprendre la technique pour utiliser Naterra sur le terrain.
-              </p>
-            </article>
-
-            <article class="nt-card nt-card-soft">
-              <h3 class="nt-card-title">Pour les organisateurs & gestionnaires</h3>
-              <p class="nt-card-text">
-                Territoires, règles, événements, historiques : un modèle de données
-                minimal mais puissant, pensé pour être exploitable dans la durée.
-              </p>
-            </article>
-
-            <article class="nt-card nt-card-soft">
-              <h3 class="nt-card-title">Pour la science & les collectivités</h3>
-              <p class="nt-card-text">
-                Données structurées, anonymisées, configurables par protocole.
-                Crédible pour les scientifiques, utile pour les collectivités.
-              </p>
-            </article>
-          </div>
-
-          <p class="nt-section-footnote">
-            Techniquement, un petit nombre d’entités (User, Signal, Session, Event, Territory,
-            Protocol, Media, Rule, Partner) suffisent à décrire chasse, trail, forêt, eau…
-            juste avec des configurations de ces briques.
-          </p>
-        </div>
-      </section>
-
-      <!-- ====== BÊTA / CONTACT ====== -->
-      <section id="beta" class="nt-section">
-        <div class="nt-section-inner nt-beta">
-          <div class="nt-beta-text">
-            <h2 class="nt-section-title">Envie de faire partie des premiers terrains Naterra&nbsp;?</h2>
-            <p class="nt-section-intro">
-              Tu organises des chasses, des événements nature, tu gères un territoire,
-              ou tu travailles sur des protocoles de science citoyenne&nbsp;?
-              On cherche quelques terrains pilotes pour co-construire la V1.
-            </p>
-            <p class="nt-beta-highlight">
-              Dis-nous qui tu es, ton territoire, et comment tu utilises aujourd’hui
-              la nature. On reviendra vers toi si ton cas d’usage colle à la première vague.
-            </p>
-
-            <div class="nt-beta-actions">
+            <div class="nt-contact-actions">
               <a
-                href="mailto:hello@naterra.io?subject=Candidature%20b%C3%AAta%20Naterra&body=Bonjour%2C%0A%0ANous souhaiterions participer%20%C3%A0%20la%20b%C3%AAta%20Naterra.%20Voici%20quelques%20informations%20sur%20notre%20usage%20(territoire%2C%20activit%C3%A9s%2C%20enjeux...).%0A%0AMerci%20!"
+                href="mailto:hello@naterra.io?subject=Prise%20de%20contact%20Naterra"
                 class="nt-btn nt-btn-primary"
               >
-                Contacter l’équipe
+                Contacter Naterra
               </a>
-              <p class="nt-beta-note">
-                Ou écris directement à <strong>hello@naterra.io</strong>
+              <p class="nt-contact-note">
+                Un simple email suffit. Pas de formulaire ni de newsletter
+                automatique.
               </p>
             </div>
           </div>
@@ -418,23 +221,16 @@
       </section>
     </main>
 
-    <!-- ====== FOOTER ====== -->
+    <!-- FOOTER -->
     <footer class="nt-footer">
-      <div class="nt-footer-inner">
-        <div class="nt-footer-brand">
-          <span class="nt-logo-mark nt-logo-mark-small">N</span>
-          <span class="nt-footer-text">Naterra</span>
-        </div>
-        <p class="nt-footer-meta">
-          © <span id="year"></span> Naterra. Projet indépendant, développé avec le terrain.
-        </p>
-        <p class="nt-footer-links">
-          <a href="mailto:hello@naterra.io">Contact</a>
-          <span class="nt-footer-dot">•</span>
-          <span>Mentions légales (à venir)</span>
-        </p>
+      <div class="nt-shell nt-footer-inner">
+        <span>© <span id="year"></span> Naterra.</span>
+        <span>Projet indépendant, construit avec des usagers de terrain.</span>
+        <span>
+          <a href="mailto:hello@naterra.io">hello@naterra.io</a> ·
+          Mentions légales (à venir)
+        </span>
       </div>
-
       <script>
         const y = document.getElementById("year");
         if (y) y.textContent = new Date().getFullYear();
