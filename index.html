@@ -1,269 +1,331 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <title>Naterra – La carte vivante des usages de la nature</title>
-    <meta
-      name="description"
-      content="Naterra est la carte vivante des usages de la nature : une même carte pour voir les activités, zones sensibles et signaux de sécurité en forêt et à la campagne."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Naterra — la carte vivante des usages de la nature. Sécurité et cohabitation sur le terrain." />
+    <title>Naterra — Carte vivante des usages de la nature</title>
+
+    <!-- ✅ Optionnel: change la police quand tu veux (sinon ça marche très bien sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./assets/favicon.png" />
   </head>
+
   <body>
+    <div class="bg" aria-hidden="true"></div>
+
     <!-- HEADER -->
-    <header class="nt-header">
-      <div class="nt-shell nt-header__inner">
-        <div class="nt-brand">
-          <div class="nt-brand__mark">N</div>
-          <div class="nt-brand__text">Naterra</div>
-        </div>
-        <nav class="nt-nav">
-          <a href="#why" class="nt-nav__link">À quoi ça sert</a>
-          <a href="#outdoor" class="nt-nav__link">Outdoor</a>
-          <a href="#space" class="nt-nav__link">Mon espace</a>
+    <header class="header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Naterra">
+          <!-- ✅ Remplace par ton logo -->
+          <img class="brand-logo" src="./assets/logo.svg" alt="" onerror="this.style.display='none'" />
+          <span class="brand-name">Naterra</span>
+        </a>
+
+        <nav class="nav" aria-label="Navigation">
+          <a href="#produit">Produit</a>
+          <a href="#valeurs">Valeurs</a>
+          <a href="#captures">Captures</a>
+          <a href="#contact">Contact</a>
         </nav>
-        <a href="#hero-cta" class="nt-header__cta">Se connecter</a>
+
+        <div class="header-actions">
+          <a class="btn btn-ghost" href="#contact">Demander une démo</a>
+        </div>
       </div>
     </header>
 
-    <main>
-      <!-- 1) HERO -->
-      <section class="nt-hero" id="top">
-        <div class="nt-shell nt-hero__grid">
-          <div class="nt-hero__text">
-            <p class="nt-hero__eyebrow">En construction · lancement progressif</p>
-            <h1 class="nt-hero__title">
-              La carte vivante<br />
-              des usages de la nature.
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="badge">Carte vivante des usages de la nature</div>
+
+            <h1 class="h1">
+              Sécurité & cohabitation,
+              <span class="accent">enfin lisibles sur une carte</span>.
             </h1>
-            <p class="nt-hero__subtitle">
-              Naterra réunit sur une même carte les activités, zones sensibles
-              et signaux de sécurité pour mieux cohabiter en forêt et à la
-              campagne – sans changer tes habitudes d’outdoor.
+
+            <p class="lead">
+              Naterra aide les pratiquants outdoor (rando, chasse, VTT, équitation…) à anticiper les situations terrain
+              via des signaux géolocalisés, une privacy contextuelle et une expérience mobile-first.
             </p>
 
-            <ul class="nt-hero__bullets">
-              <li>
-                Voir en direct ce qui se passe autour de toi
-                (chasse, travaux, événements, troupeaux…)
-              </li>
-              <li>
-                Être prévenu quand tu entres dans une zone sensible ou à risque
-              </li>
-              <li>
-                Partager des signaux terrain utiles aux autres usagers
-                et aux gestionnaires
-              </li>
-            </ul>
+            <div class="cta">
+              <a class="btn btn-primary" href="#contact">Nous contacter</a>
+              <a class="btn btn-soft" href="#captures">Voir l’app</a>
+            </div>
 
-            <div class="nt-hero__actions" id="hero-cta">
-              <a href="#"
-                 class="nt-btn nt-btn--primary">
-                Se connecter
-              </a>
-              <p class="nt-hero__note">
-                Naterra se construit avec des territoires pilotes&nbsp;:
-                pas de tracking caché, pas de revente de données.
-              </p>
+            <div class="trust">
+              <span class="pill"><span class="dot"></span> Mobile-first</span>
+              <span class="pill"><span class="dot"></span> Signaux terrain</span>
+              <span class="pill"><span class="dot"></span> Privacy contextuelle</span>
             </div>
           </div>
 
-          <div class="nt-hero__visual">
-            <div class="nt-hero-card">
-              <div class="nt-hero-card__badge">Aperçu concept</div>
-              <div class="nt-hero-card__map">
-                <div class="nt-hero-card__ring nt-hero-card__ring--main"></div>
-                <div class="nt-hero-card__ring nt-hero-card__ring--soft"></div>
-                <span class="nt-hero-card__dot nt-hero-card__dot--red"></span>
-                <span class="nt-hero-card__dot nt-hero-card__dot--amber"></span>
-                <span class="nt-hero-card__dot nt-hero-card__dot--green"></span>
-              </div>
-              <div class="nt-hero-card__rows">
-                <div class="nt-hero-row">
-                  <span class="nt-hero-row__label">Autour de toi</span>
-                  <span class="nt-hero-row__value">Activité en cours · 650 m</span>
-                </div>
-                <div class="nt-hero-row">
-                  <span class="nt-hero-row__label">Signal récent</span>
-                  <span class="nt-hero-row__value">
-                    Chemin dégradé · hier
-                  </span>
-                </div>
-                <div class="nt-hero-row">
-                  <span class="nt-hero-row__label">Mode actif</span>
-                  <span class="nt-hero-row__value">Explorer</span>
+          <div class="hero-visual" aria-label="Aperçu app">
+            <div class="phone">
+              <div class="phone-top"></div>
+              <div class="phone-screen">
+                <!-- ✅ Mets un screenshot “hero” -->
+                <img
+                  class="phone-img"
+                  src="./assets/screens/screen-1.png"
+                  alt="Aperçu de l'application Naterra"
+                  loading="lazy"
+                  onerror="this.style.display='none'; document.querySelector('.phone-fallback').style.display='grid';"
+                />
+                <div class="phone-fallback" style="display:none;">
+                  <div class="fallback-map"></div>
+                  <div class="fallback-card">
+                    <div class="fallback-title"></div>
+                    <div class="fallback-line"></div>
+                    <div class="fallback-line short"></div>
+                  </div>
                 </div>
               </div>
+              <div class="phone-bottom"></div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 2) À QUOI ÇA SERT CONCRÈTEMENT ? -->
-      <section class="nt-section" id="why">
-        <div class="nt-shell">
-          <div class="nt-section__header">
-            <h2>À quoi sert Naterra, sur le terrain&nbsp;?</h2>
-            <p>
-              Traduire une promesse simple en bénéfices concrets pour celles
-              et ceux qui vivent dehors – pratiquants comme organisateurs.
+      <!-- PRODUIT -->
+      <section id="produit" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="h2">Ce que fait Naterra</h2>
+            <p class="sub">
+              Une expérience centrée sur la carte, pensée pour une lecture rapide sur le terrain.
             </p>
           </div>
 
-          <div class="nt-two-cols">
-            <article class="nt-block">
-              <h3>Pratiquants</h3>
-              <p class="nt-block__lead">
-                Pour les pratiquants outdoor, Naterra ajoute une couche de
-                contexte là où tu regardes déjà ta carte.
-              </p>
-              <ul class="nt-block__list">
-                <li>
-                  Savoir où des activités sont en cours
-                  (chasse collective, événement, travaux)
-                </li>
-                <li>
-                  Éviter les zones délicates
-                  (troupeaux, chiens de protection, zones de quiétude)
-                </li>
-                <li>
-                  Signaler facilement un danger, un chemin dégradé
-                  ou une observation importante
-                </li>
-              </ul>
-            </article>
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title">Signaux</div>
+              <div class="card-text">
+                Infos géolocalisées (sécurité, cohabitation, biodiversité, conditions terrain) avec durée et visibilité.
+              </div>
+            </div>
 
-            <article class="nt-block">
-              <h3>Organisateurs & gestionnaires</h3>
-              <p class="nt-block__lead">
-                Pour les organisateurs et gestionnaires, Naterra devient
-                un tableau de bord simple des usages sur le territoire.
-              </p>
-              <ul class="nt-block__list">
-                <li>
-                  Préparer et partager les zones concernées par une chasse,
-                  un événement ou des travaux
-                </li>
-                <li>
-                  Suivre en direct les sorties et activités déclarées
-                  sur ton territoire
-                </li>
-                <li>
-                  Capitaliser sur les signaux terrain
-                  (incidents, conflits d’usage, observations)
-                  pour ajuster les règles
-                </li>
-              </ul>
-            </article>
+            <div class="card">
+              <div class="card-title">Territoires</div>
+              <div class="card-text">
+                Zones structurées (règles, membres, POI) pour clarifier les usages et organiser localement.
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-title">Événements</div>
+              <div class="card-text">
+                Créer / rejoindre un événement, suivre le groupe et partager le bon niveau d’information.
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-title">Activités</div>
+              <div class="card-text">
+                Suivi et trace personnelle (rando, trail, VTT, chasse…) avec contrôle fin de la confidentialité.
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- 3) POUR TOUS LES AMOUREUX DE L’OUTDOOR -->
-      <section class="nt-section nt-section--alt" id="outdoor">
-        <div class="nt-shell">
-          <div class="nt-section__header nt-section__header--center">
-            <h2>Pour tous les amoureux de l’outdoor, pas pour une pratique unique.</h2>
-            <p>
-              Naterra n’est pas une “app de chasse” ni une app de sport de plus.
-              C’est une infrastructure commune, pensée pour que des pratiques
-              très différentes puissent se croiser en sécurité sur la même carte,
-              avec un langage de signaux partagé.
-            </p>
+      <!-- VALEURS -->
+      <section id="valeurs" class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="h2">Nos valeurs</h2>
+            <p class="sub">Une tech discrète, utile, et respectueuse des pratiques.</p>
           </div>
 
-          <div class="nt-tags">
-            <span class="nt-tag">Randonnée</span>
-            <span class="nt-tag">Trail</span>
-            <span class="nt-tag">VTT</span>
-            <span class="nt-tag">Cheval</span>
-            <span class="nt-tag">Chasse</span>
-            <span class="nt-tag">Forêt</span>
-            <span class="nt-tag">Agriculture</span>
-            <span class="nt-tag">Science citoyenne</span>
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title">Sécurité d’abord</div>
+              <div class="card-text">Réduire les risques sur le terrain via des signaux clairs et actionnables.</div>
+            </div>
+            <div class="card">
+              <div class="card-title">Cohabitation</div>
+              <div class="card-text">Faire coexister les usages avec respect et lisibilité.</div>
+            </div>
+            <div class="card">
+              <div class="card-title">Simplicité terrain</div>
+              <div class="card-text">Mobile-first, lisible en extérieur, gestes rapides, infos essentielles.</div>
+            </div>
+            <div class="card">
+              <div class="card-title">Confiance & privacy</div>
+              <div class="card-text">Visibilité et précision ajustables selon le contexte (public / groupe / privé).</div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- 4) TEASER "MON ESPACE NATERRA" -->
-      <section class="nt-section" id="space">
-        <div class="nt-shell">
-          <div class="nt-section__header">
-            <h2>Mon espace Naterra.</h2>
-            <p>
-              Après connexion, chaque personne retrouve un espace simple,
-              centré sur sa carte, avec quelques modules évidents.
-            </p>
+      <!-- CAPTURES -->
+      <section id="captures" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="h2">Captures de l’app</h2>
+            <p class="sub">Remplace ces images par tes screenshots dans <code>/assets/screens/</code>.</p>
           </div>
 
-          <div class="nt-modules">
-            <article class="nt-module">
-              <p class="nt-module__label">Carte live</p>
-              <p class="nt-module__text">
-                Ta position, les signaux à proximité et les activités en cours,
-                filtrés selon ton profil.
-              </p>
-            </article>
+          <div class="shots">
+            <figure class="shot">
+              <img src="./assets/screens/screen-1.png" alt="Capture écran — Carte" loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('missing')" />
+              <figcaption>Carte & usages</figcaption>
+            </figure>
 
-            <article class="nt-module">
-              <p class="nt-module__label">Mes sorties</p>
-              <p class="nt-module__text">
-                Les sorties passées et en cours, avec les zones traversées
-                et les signaux que tu as posés.
-              </p>
-            </article>
+            <figure class="shot">
+              <img src="./assets/screens/screen-2.png" alt="Capture écran — Signal" loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('missing')" />
+              <figcaption>Signaux terrain</figcaption>
+            </figure>
 
-            <article class="nt-module">
-              <p class="nt-module__label">Mes territoires & événements</p>
-              <p class="nt-module__text">
-                Les territoires que tu suis ou gères, les journées de chasse
-                ou événements programmés.
-              </p>
-            </article>
+            <figure class="shot">
+              <img src="./assets/screens/screen-3.png" alt="Capture écran — Territoires" loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('missing')" />
+              <figcaption>Territoires</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
 
-            <article class="nt-module">
-              <p class="nt-module__label">Signaux & observations</p>
-              <p class="nt-module__text">
-                L’historique de ce que tu as signalé sur le terrain&nbsp;:
-                dangers, incidents, observations nature, conflits d’usage.
+      <!-- CONTACT -->
+      <section id="contact" class="section section-alt">
+        <div class="container">
+          <div class="contact">
+            <div class="contact-copy">
+              <h2 class="h2">Parlons de votre usage</h2>
+              <p class="sub">
+                MVP : envoi via email. (On branchera un formulaire hébergé ensuite si besoin.)
               </p>
-            </article>
+
+              <div class="pills">
+                <span class="pill">Démo</span>
+                <span class="pill">Territoires pilotes</span>
+                <span class="pill">Partenariats</span>
+                <span class="pill">Collectivités</span>
+              </div>
+            </div>
+
+            <form class="form" id="contactForm">
+              <label>
+                <span>Nom</span>
+                <input name="name" required placeholder="Votre nom" />
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input name="email" type="email" required placeholder="vous@exemple.com" />
+              </label>
+
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="5" required placeholder="Dites-nous en 2 lignes ce que vous cherchez…"></textarea>
+              </label>
+
+              <button class="btn btn-primary full" type="submit">Envoyer</button>
+
+              <p class="fine">
+                En envoyant, vous acceptez nos
+                <button type="button" class="link" id="openCgu">CGU</button>.
+              </p>
+            </form>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- 5) FOOTER -->
-    <footer class="nt-footer">
-      <div class="nt-shell nt-footer__inner">
-        <div class="nt-footer__row">
-          <span class="nt-footer__logo">Naterra</span>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand small">
+            <span class="brand-name">Naterra</span>
+          </div>
+          <div class="footer-note">© <span id="year"></span> Naterra — Tous droits réservés</div>
         </div>
-        <div class="nt-footer__row">
-          <a href="#top">CGU</a>
-          <span>·</span>
-          <a href="#top">Confidentialité</a>
-          <span>·</span>
-          <a href="mailto:hello@naterra.io">Contact</a>
-        </div>
-        <div class="nt-footer__row nt-footer__row--fine">
-          <span>
-            © <span id="year"></span> Naterra. Projet indépendant, construit
-            avec des usagers de terrain.
-          </span>
-          <span>
-            Naterra aide à mieux partager l’information sur les usages de la
-            nature, mais ne remplace jamais la vigilance ni le respect des
-            règles locales de sécurité.
-          </span>
+
+        <div class="footer-links">
+          <button class="link" id="openCgu2">CGU</button>
+          <a class="link" href="#contact">Contact</a>
+          <span class="footer-muted">Confidentialité (bientôt)</span>
         </div>
       </div>
-
-      <script>
-        const y = document.getElementById("year");
-        if (y) y.textContent = new Date().getFullYear();
-      </script>
     </footer>
+
+    <!-- MODAL CGU -->
+    <div class="modal" id="cguModal" aria-hidden="true">
+      <div class="modal-backdrop" id="closeCgu"></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-label="CGU">
+        <div class="modal-head">
+          <div class="modal-title">Conditions Générales d’Utilisation</div>
+          <button class="modal-close" id="closeCgu2" aria-label="Fermer">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="legal">
+            <h3>1. Objet</h3>
+            <p>Les présentes CGU encadrent l’accès et l’utilisation du service Naterra.</p>
+
+            <h3>2. Usage</h3>
+            <ul>
+              <li>Vous vous engagez à utiliser le service conformément aux lois en vigueur.</li>
+              <li>Vous restez responsable des informations publiées (signaux, contenus, etc.).</li>
+            </ul>
+
+            <h3>3. Données & confidentialité</h3>
+            <p>Naterra propose des réglages de visibilité et de précision selon le contexte (public / groupe / privé).</p>
+
+            <h3>4. Limitation</h3>
+            <p>Les informations affichées sont indicatives et ne remplacent pas la vigilance sur le terrain.</p>
+
+            <h3>5. Contact</h3>
+            <p>Contact : <strong>contact@naterra.app</strong></p>
+
+            <p class="legal-muted">(Remplacer ce texte par des CGU validées juridiquement dès que possible.)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // année
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // modal CGU
+      const modal = document.getElementById("cguModal");
+      const open1 = document.getElementById("openCgu");
+      const open2 = document.getElementById("openCgu2");
+      const close1 = document.getElementById("closeCgu");
+      const close2 = document.getElementById("closeCgu2");
+
+      function openModal(){ modal.classList.add("open"); modal.setAttribute("aria-hidden","false"); }
+      function closeModal(){ modal.classList.remove("open"); modal.setAttribute("aria-hidden","true"); }
+
+      open1.addEventListener("click", openModal);
+      open2.addEventListener("click", openModal);
+      close1.addEventListener("click", closeModal);
+      close2.addEventListener("click", closeModal);
+
+      // Contact MVP: mailto
+      document.getElementById("contactForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const fd = new FormData(e.currentTarget);
+        const name = (fd.get("name") || "").toString().trim();
+        const email = (fd.get("email") || "").toString().trim();
+        const message = (fd.get("message") || "").toString().trim();
+
+        const subject = encodeURIComponent("Contact — Naterra");
+        const body = encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n`);
+        window.location.href = `mailto:contact@naterra.app?subject=${subject}&body=${body}`;
+      });
+    </script>
   </body>
 </html>
