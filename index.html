@@ -3,17 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="Naterra — la carte vivante des usages de la nature. Synchroniser les activités outdoor, faciliter la cohabitation et produire des données utiles au vivant." />
-    <title>Naterra — Carte vivante des usages de la nature</title>
-    <link rel="stylesheet" href="styles.css?v=6" />
-    <link rel="icon" href="./assets/favicon.png" />
+    <meta name="description" content="Naterra — la carte vivante des usages de la nature. Synchroniser, sécuriser, documenter le terrain." />
+    <title>Naterra — La carte vivante des usages de la nature</title>
+    <link rel="stylesheet" href="styles.css?v=10" />
   </head>
 
   <body>
+    <!-- Header -->
     <header class="header">
       <div class="container header-inner">
         <a class="brand" href="#top" aria-label="Naterra">
-          <img class="brand-logo" src="./assets/logo.png" alt="Naterra" onerror="this.style.display='none'"/>
+          <!-- Logo optionnel : mets ./assets/logo.svg plus tard -->
+          <!-- <img class="brand-logo" src="./assets/logo.svg" alt="Naterra" /> -->
+          <span class="brand-mark" aria-hidden="true">N</span>
           <span class="brand-name">Naterra</span>
         </a>
 
@@ -26,260 +28,338 @@
         </nav>
 
         <div class="header-actions">
-          <a class="btn btn-outline" href="#cta-final">Rejoindre</a>
+          <a class="btn btn-primary" href="#contact">Nous contacter</a>
         </div>
       </div>
     </header>
 
     <main id="top">
-      <!-- 1. HERO -->
+      <!-- 1) HERO -->
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <div class="badge">
-              <span class="badge-dot"></span>
-              Comprendre Naterra en 5 secondes
+            <div class="pill">
+              <span class="pill-dot"></span>
+              Infrastructure pour la nature
             </div>
 
             <h1 class="h1">
-              La carte vivante <br />
-              des usages de la nature
+              La carte vivante des usages<br />
+              de la nature
             </h1>
 
             <p class="lead">
-              Naterra synchronise les activités outdoor, facilite la cohabitation sur le terrain,
+              Naterra synchronise les activités outdoor, facilite la cohabitation sur le terrain
               et transforme chaque sortie en données utiles au vivant.
             </p>
 
             <div class="cta">
               <a class="btn btn-primary" href="#solution">Découvrir la carte</a>
-              <a class="btn btn-soft" href="#cta-final">Rejoindre la communauté</a>
+              <a class="btn btn-outline" href="#cta-final">Rejoindre la communauté</a>
             </div>
 
-            <div class="hero-metrics">
-              <div class="metric">
-                <div class="metric-title">Usagers</div>
-                <div class="metric-text">Plus sûr & plus fluide</div>
+            <div class="highlights">
+              <div class="highlight">
+                <div class="highlight-title">Multi-couches</div>
+                <div class="highlight-text">Activités • règles • POI • vigilance</div>
               </div>
-              <div class="metric">
-                <div class="metric-title">Territoires</div>
-                <div class="metric-text">Coordination moderne</div>
+              <div class="highlight">
+                <div class="highlight-title">Temps réel</div>
+                <div class="highlight-text">Info au bon moment, au bon endroit</div>
               </div>
-              <div class="metric">
-                <div class="metric-title">Vivant</div>
-                <div class="metric-text">Données terrain utiles</div>
+              <div class="highlight">
+                <div class="highlight-title">Protocole</div>
+                <div class="highlight-text">Observations terrain structurées</div>
               </div>
             </div>
           </div>
 
-          <div class="hero-visual" aria-label="Aperçu app">
-            <div class="phone">
-              <div class="phone-top"></div>
-              <div class="phone-screen">
-                <img
-                  class="phone-img"
-                  src="./assets/screens/screen-1.png"
-                  alt="Aperçu de l'application Naterra"
-                  loading="lazy"
-                  onerror="this.style.display='none'; document.querySelector('.phone-fallback').style.display='grid';"
-                />
-                <div class="phone-fallback" style="display:none;">
-                  <div class="fallback-shape"></div>
-                  <div class="fallback-card">
-                    <div class="fallback-title"></div>
-                    <div class="fallback-line"></div>
-                    <div class="fallback-line short"></div>
-                  </div>
+          <div class="hero-media">
+            <div class="mock">
+              <div class="mock-top"></div>
+              <div class="mock-body">
+                <!-- Option : mets une capture ici -->
+                <!-- <img src="./assets/screens/screen-1.png" alt="Capture app" /> -->
+                <div class="mock-placeholder">
+                  <div class="mock-badge">Aperçu app</div>
+                  <div class="mock-line"></div>
+                  <div class="mock-line short"></div>
+                  <div class="mock-map"></div>
                 </div>
               </div>
-              <div class="phone-bottom"></div>
+              <div class="mock-bottom"></div>
             </div>
 
-            <div class="shots">
-              <div class="shot">
-                <img src="./assets/screens/screen-2.png" alt="Capture — Signaux" loading="lazy"
-                  onerror="this.style.display='none'; this.parentElement.classList.add('missing')" />
-                <div class="shot-label">Signaux</div>
+            <div class="mini-grid">
+              <div class="mini-card">
+                <div class="mini-icon">⛑️</div>
+                <div class="mini-title">Sécurité</div>
+                <div class="mini-text">Signaux & vigilance terrain</div>
               </div>
-              <div class="shot">
-                <img src="./assets/screens/screen-3.png" alt="Capture — Territoires" loading="lazy"
-                  onerror="this.style.display='none'; this.parentElement.classList.add('missing')" />
-                <div class="shot-label">Territoires</div>
+              <div class="mini-card">
+                <div class="mini-icon">🧭</div>
+                <div class="mini-title">Usages</div>
+                <div class="mini-text">Coordination des pratiques</div>
+              </div>
+              <div class="mini-card">
+                <div class="mini-icon">🌿</div>
+                <div class="mini-title">Vivant</div>
+                <div class="mini-text">Données utiles à la recherche</div>
+              </div>
+              <div class="mini-card">
+                <div class="mini-icon">🗺️</div>
+                <div class="mini-title">Territoires</div>
+                <div class="mini-text">Règles & contexte local</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 2. PROBLÈME -->
+      <!-- 2) PROBLÈME -->
       <section id="probleme" class="section">
         <div class="container">
           <div class="section-head">
-            <h2 class="h2">La nature est partagée, mais rarement synchronisée</h2>
+            <div class="pill subtle">
+              <span class="pill-dot warn"></span>
+              Le problème
+            </div>
+            <h2 class="h2">La nature est partagée, l’information est fragmentée</h2>
             <p class="sub">
-              Les usages se croisent sans se coordonner. L’information est fragmentée.
-              Et les données terrain utiles à la protection du vivant restent trop rares.
+              Les usages se croisent sans coordination. Les décideurs manquent de visibilité.
+              Et les données terrain restent dispersées.
             </p>
-          </div>
-
-          <div class="grid-3">
-            <div class="card">
-              <div class="card-kicker">Sur le terrain</div>
-              <div class="card-title">Risques & incompréhensions</div>
-              <div class="card-text">Des situations évitables faute d’info au bon moment.</div>
-            </div>
-
-            <div class="card">
-              <div class="card-kicker">Organisation</div>
-              <div class="card-title">Peu de visibilité</div>
-              <div class="card-text">Difficile d’anticiper et de planifier les usages.</div>
-            </div>
-
-            <div class="card">
-              <div class="card-kicker">Connaissance</div>
-              <div class="card-title">Données dispersées</div>
-              <div class="card-text">Peu de continuité pour comprendre et protéger.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 3. SOLUTION -->
-      <section id="solution" class="section section-alt">
-        <div class="container">
-          <div class="section-head">
-            <h2 class="h2">Une plateforme cartographique pour vivre, comprendre et protéger</h2>
-            <p class="sub">Une carte commune + des outils par pratique. Simple à lire, simple à utiliser.</p>
           </div>
 
           <div class="grid-2">
             <div class="card">
-              <div class="card-title">Carte dynamique multi-couches</div>
-              <div class="card-text">
-                Activités en cours, règles locales, points d’intérêt, zones de vigilance — au même endroit.
-              </div>
+              <div class="card-title">Information fragmentée</div>
+              <div class="card-text">Données éclatées entre applis, institutions et individus.</div>
+            </div>
+            <div class="card">
+              <div class="card-title">Enjeux de sécurité</div>
+              <div class="card-text">Peu de visibilité en temps réel → risques augmentés.</div>
+            </div>
+            <div class="card">
+              <div class="card-title">Coordination difficile</div>
+              <div class="card-text">Les acteurs terrain ne partagent pas un contexte commun.</div>
+            </div>
+            <div class="card">
+              <div class="card-title">Données scientifiques limitées</div>
+              <div class="card-text">Peu d’observations massives, structurées et continues.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3) SOLUTION -->
+      <section id="solution" class="section section-soft">
+        <div class="container">
+          <div class="section-head">
+            <div class="pill subtle">
+              <span class="pill-dot"></span>
+              Notre solution
+            </div>
+            <h2 class="h2">Une plateforme cartographique multi-couches</h2>
+            <p class="sub">
+              Une carte commune + des outils adaptés aux usages outdoor.
+            </p>
+          </div>
+
+          <div class="split">
+            <div class="panel">
+              <div class="panel-title">Cartographie dynamique</div>
+              <p class="panel-text">
+                Données officielles, contributions terrain, contexte local — dans une lecture simple.
+              </p>
               <div class="chips">
-                <span class="chip">Activités</span>
-                <span class="chip">Réglementation</span>
-                <span class="chip">Vigilance</span>
-                <span class="chip">POI</span>
+                <span class="chip">Randonnée</span>
+                <span class="chip">Chasse</span>
+                <span class="chip">VTT</span>
+                <span class="chip">Équitation</span>
+                <span class="chip">Observation</span>
               </div>
             </div>
 
-            <div class="card">
-              <div class="card-title">Outils utiles pour chaque usage</div>
-              <div class="card-text">
-                Itinéraires, organisation de sorties, suivi live, alertes & signalements, historique.
-              </div>
-              <div class="note">
-                👉 Chaque pratique a ses outils, sur une carte commune.
+            <div class="panel">
+              <div class="panel-title">Micro-services intégrés</div>
+              <p class="panel-text">
+                Itinéraires, sorties, suivi live, alertes & signalements, historique.
+              </p>
+              <div class="callout">
+                👉 Chaque pratique dispose d’outils utiles, sur une carte commune.
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 4. DIFFÉRENCIATION -->
+      <!-- 4) PROTOCOLE -->
       <section id="protocole" class="section">
         <div class="container">
           <div class="section-head">
-            <h2 class="h2">Transformer les usages en données utiles au vivant</h2>
+            <div class="pill subtle">
+              <span class="pill-dot"></span>
+              Protocole Naterra
+            </div>
+            <h2 class="h2">Transformer les sorties en données utiles</h2>
             <p class="sub">
-              Naterra permet de documenter le terrain, structurer les observations, et les rendre exploitables.
+              Un parcours simple pour documenter le terrain et rendre la donnée exploitable.
             </p>
           </div>
 
           <div class="grid-3">
-            <div class="card">
-              <div class="card-title">Collecte terrain</div>
-              <div class="card-text">Photos & observations géolocalisées, horodatées, contextualisées.</div>
+            <div class="step">
+              <div class="step-top">
+                <div class="step-icon">📷</div>
+                <div class="step-tag">Étape 1</div>
+              </div>
+              <div class="step-title">Capture terrain</div>
+              <div class="step-text">Photos et observations contextualisées.</div>
             </div>
 
-            <div class="card">
-              <div class="card-title">Enrichissement</div>
-              <div class="card-text">IA pour indices, espèces, habitats — et structuration des données.</div>
+            <div class="step">
+              <div class="step-top">
+                <div class="step-icon">📍</div>
+                <div class="step-tag">Étape 2</div>
+              </div>
+              <div class="step-title">Géolocalisation</div>
+              <div class="step-text">Position + contexte spatial.</div>
             </div>
 
-            <div class="card">
-              <div class="card-title">Partage</div>
-              <div class="card-text">Mise à disposition d’acteurs scientifiques et territoriaux.</div>
+            <div class="step">
+              <div class="step-top">
+                <div class="step-icon">🕒</div>
+                <div class="step-tag">Étape 3</div>
+              </div>
+              <div class="step-title">Horodatage</div>
+              <div class="step-text">Historique temporel des usages.</div>
+            </div>
+
+            <div class="step">
+              <div class="step-top">
+                <div class="step-icon">✨</div>
+                <div class="step-tag">Étape 4</div>
+              </div>
+              <div class="step-title">Enrichissement IA</div>
+              <div class="step-text">Indices, espèces, habitats (selon besoin).</div>
+            </div>
+
+            <div class="step">
+              <div class="step-top">
+                <div class="step-icon">🧾</div>
+                <div class="step-tag">Étape 5</div>
+              </div>
+              <div class="step-title">Structuration</div>
+              <div class="step-text">Normalisation et interopérabilité.</div>
+            </div>
+
+            <div class="step">
+              <div class="step-top">
+                <div class="step-icon">📈</div>
+                <div class="step-tag">Étape 6</div>
+              </div>
+              <div class="step-title">Valorisation</div>
+              <div class="step-text">Partage utile pour territoires & recherche.</div>
             </div>
           </div>
-
-          <div class="note wide">👉 Chaque sortie contribue à la connaissance du territoire.</div>
         </div>
       </section>
 
-      <!-- 5. IMPACT -->
-      <section id="impact" class="section section-alt">
+      <!-- 5) IMPACT -->
+      <section id="impact" class="section section-soft">
         <div class="container">
           <div class="section-head">
-            <h2 class="h2">Pourquoi ça compte</h2>
-            <p class="sub">Un bénéfice clair pour les usagers, les territoires et le vivant.</p>
+            <div class="pill subtle">
+              <span class="pill-dot"></span>
+              Impact
+            </div>
+            <h2 class="h2">Valeur pour chaque écosystème</h2>
+            <p class="sub">
+              Une expérience meilleure pour l’outdoor, une coordination moderne pour les territoires,
+              et un accès inédit à la donnée terrain.
+            </p>
           </div>
 
-          <div class="grid-3">
+          <div class="grid-2">
             <div class="card">
-              <div class="card-kicker">Pour les usagers</div>
-              <div class="card-title">Plus sûr</div>
-              <div class="card-text">Une pratique plus fluide, informée et sereine.</div>
+              <div class="card-title">Territoires & collectivités</div>
+              <div class="card-text">Comprendre, prévenir, planifier — avec des usages réels.</div>
             </div>
-
             <div class="card">
-              <div class="card-kicker">Pour les territoires</div>
-              <div class="card-title">Plus lisible</div>
-              <div class="card-text">Une coordination moderne des usages et des règles.</div>
+              <div class="card-title">Organisations de terrain</div>
+              <div class="card-text">Coordination des opérations, des sorties et des équipes.</div>
             </div>
-
             <div class="card">
-              <div class="card-kicker">Pour la recherche</div>
-              <div class="card-title">Plus utile</div>
-              <div class="card-text">Des données terrain continues, structurées, exploitables.</div>
+              <div class="card-title">Recherche & vivant</div>
+              <div class="card-text">Observations massives et continues, structurées.</div>
+            </div>
+            <div class="card">
+              <div class="card-title">Usagers</div>
+              <div class="card-text">Plus sûr, plus clair, plus simple sur le terrain.</div>
+            </div>
+          </div>
+
+          <!-- (optionnel) chiffres : laisse vide ou supprime -->
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-value">—</div>
+              <div class="stat-label">Observations (bêta)</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">—</div>
+              <div class="stat-label">Territoires pilotes</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">—</div>
+              <div class="stat-label">Partenaires</div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 6. VISION -->
+      <!-- 6) VISION -->
       <section id="vision" class="section">
         <div class="container">
           <div class="section-head">
+            <div class="pill subtle">
+              <span class="pill-dot"></span>
+              Vision
+            </div>
             <h2 class="h2">Synchroniser les usages pour mieux protéger la nature</h2>
             <p class="sub">
-              Naterra veut devenir l’infrastructure cartographique de référence des usages outdoor :
-              une intelligence collective au service du vivant.
+              Naterra devient une infrastructure de référence : une intelligence collective des territoires au service du vivant.
             </p>
           </div>
 
-          <div class="big-card">
-            <div class="big-card-title">Notre cap</div>
-            <div class="big-card-text">
-              Une carte commune, des signaux utiles, une donnée structurée — pour aider à décider, comprendre et protéger.
+          <div class="banner">
+            <div class="banner-title">Une infrastructure ouverte</div>
+            <div class="banner-text">
+              Qualité • standards • interopérabilité • montée en charge
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 7. CTA FINAL -->
-      <section id="cta-final" class="section cta-final">
+      <!-- 7) CTA FINAL -->
+      <section id="cta-final" class="section">
         <div class="container">
-          <div class="cta-card">
+          <div class="cta-box">
             <div>
               <h2 class="h2">Rejoignez la carte vivante de la nature</h2>
-              <p class="sub">Télécharger, proposer un terrain pilote, ou discuter partenariat & recherche.</p>
+              <p class="sub">Terrains pilotes, partenariats & recherche, communautés outdoor.</p>
             </div>
-
             <div class="cta">
               <a class="btn btn-primary" href="#contact">Télécharger l’app</a>
-              <a class="btn btn-soft" href="#contact">Partenariats & recherche</a>
-              <a class="btn btn-outline" href="#contact">En savoir plus</a>
+              <a class="btn btn-outline" href="#contact">Partenariats & recherche</a>
+              <a class="btn btn-soft" href="#contact">En savoir plus</a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- CONTACT -->
-      <section id="contact" class="section">
+      <section id="contact" class="section section-soft">
         <div class="container">
           <div class="section-head">
             <h2 class="h2">Contact</h2>
@@ -292,15 +372,13 @@
                 <span>Nom</span>
                 <input name="name" required placeholder="Votre nom" />
               </label>
-
               <label>
                 <span>Email</span>
                 <input name="email" type="email" required placeholder="vous@exemple.com" />
               </label>
-
               <label>
                 <span>Message</span>
-                <textarea name="message" rows="5" required placeholder="Décrivez votre besoin (démo, terrain pilote, partenariat…)"></textarea>
+                <textarea name="message" rows="5" required placeholder="Démo, terrain pilote, partenariat…"></textarea>
               </label>
 
               <button class="btn btn-primary full" type="submit">Envoyer</button>
@@ -313,18 +391,13 @@
 
             <div class="side">
               <div class="side-card">
-                <div class="side-title">Ce qu’on cherche</div>
-                <div class="side-text">Terrains pilotes • Partenariats • Communautés • Recherche</div>
-                <div class="side-mail">contact@naterra.app</div>
+                <div class="side-title">Email</div>
+                <div class="side-value">contact@naterra.app</div>
+                <div class="side-hint">Réponse sous 48h.</div>
               </div>
-
-              <div class="side-card light">
-                <div class="side-title">Liens rapides</div>
-                <div class="side-links">
-                  <a href="#solution">Solution</a>
-                  <a href="#protocole">Protocole</a>
-                  <a href="#impact">Impact</a>
-                </div>
+              <div class="side-card">
+                <div class="side-title">Demandes</div>
+                <div class="side-list">• Démo • Partenariats • Terrains pilotes • Presse</div>
               </div>
             </div>
           </div>
@@ -336,9 +409,8 @@
       <div class="container footer-inner">
         <div class="footer-left">
           <div class="footer-brand">Naterra</div>
-          <div class="footer-note">© <span id="year"></span> Naterra — Tous droits réservés</div>
+          <div class="footer-note">© <span id="year"></span> Naterra</div>
         </div>
-
         <div class="footer-links">
           <button class="link" id="openCgu2">CGU</button>
           <a href="#contact">Contact</a>
@@ -346,29 +418,18 @@
       </div>
     </footer>
 
-    <!-- MODAL CGU -->
+    <!-- Modal CGU (placeholder) -->
     <div class="modal" id="cguModal" aria-hidden="true">
       <div class="modal-backdrop" id="closeCgu"></div>
       <div class="modal-card" role="dialog" aria-modal="true" aria-label="CGU">
         <div class="modal-head">
-          <div class="modal-title">Conditions Générales d’Utilisation</div>
+          <div class="modal-title">CGU</div>
           <button class="modal-close" id="closeCgu2" aria-label="Fermer">✕</button>
         </div>
         <div class="modal-body">
-          <div class="legal">
-            <h3>1. Objet</h3>
-            <p>Les présentes CGU encadrent l’accès et l’utilisation du service Naterra.</p>
-            <h3>2. Usage</h3>
-            <ul>
-              <li>Utilisation conforme aux lois en vigueur.</li>
-              <li>Responsabilité des contenus publiés.</li>
-            </ul>
-            <h3>3. Données</h3>
-            <p>Réglages de visibilité et de précision selon le contexte.</p>
-            <h3>4. Limitation</h3>
-            <p>Les informations sont indicatives et ne remplacent pas la vigilance terrain.</p>
-            <p class="legal-muted">(À remplacer par des CGU validées juridiquement.)</p>
-          </div>
+          <p class="legal">
+            Texte CGU (placeholder). À remplacer par une version validée juridiquement.
+          </p>
         </div>
       </div>
     </div>
