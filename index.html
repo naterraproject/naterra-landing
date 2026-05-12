@@ -1,269 +1,322 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Naterra – La carte vivante des usages de la nature</title>
-    <meta
-      name="description"
-      content="Naterra est la carte vivante des usages de la nature : une même carte pour voir les activités, zones sensibles et signaux de sécurité en forêt et à la campagne."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <!-- HEADER -->
-    <header class="nt-header">
-      <div class="nt-shell nt-header__inner">
-        <div class="nt-brand">
-          <div class="nt-brand__mark">N</div>
-          <div class="nt-brand__text">Naterra</div>
-        </div>
-        <nav class="nt-nav">
-          <a href="#why" class="nt-nav__link">À quoi ça sert</a>
-          <a href="#outdoor" class="nt-nav__link">Outdoor</a>
-          <a href="#space" class="nt-nav__link">Mon espace</a>
-        </nav>
-        <a href="#hero-cta" class="nt-header__cta">Se connecter</a>
+<head>
+  <meta charset="UTF-8" />
+  <title>Naterra – La carte vivante des usages de la nature</title>
+  <meta name="description" content="Explorer, pratiquer, signaler. Les bonnes informations, au bon endroit, au bon moment." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="nt-header">
+  <div class="nt-header__inner">
+    <a href="#" class="nt-brand">
+      <img
+        src="./assets/20260316_Logo%20Green_No%20Text.png"
+        alt="Naterra"
+        class="nt-brand__img"
+        onerror="this.style.display='none'"
+      />
+      <span class="nt-brand__name">Naterra</span>
+    </a>
+    <nav class="nt-nav">
+      <a href="#explorer" class="nt-nav__link">Explorer</a>
+      <a href="#pratiquer" class="nt-nav__link">Pratiquer</a>
+      <a href="#signaler" class="nt-nav__link">Signaler</a>
+    </nav>
+    <a href="#download" class="nt-btn nt-btn--green nt-btn--sm">Télécharger</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="nt-hero" id="top">
+  <div class="nt-container nt-hero__inner">
+
+    <!-- Texte -->
+    <div class="nt-hero__content">
+      <h1 class="nt-hero__title">Bienvenue dehors</h1>
+      <p class="nt-hero__tagline">Explorer, pratiquer, signaler.</p>
+      <p class="nt-hero__body">Les bonnes informations, au bon endroit, au bon moment.</p>
+      <div class="nt-hero__actions">
+        <!--
+          TODO: Remplacer href="#" par le lien TestFlight iOS
+          Format attendu : https://testflight.apple.com/join/XXXXXXXX
+        -->
+        <a href="#" class="nt-btn nt-btn--green nt-btn--lg">Télécharger l'app</a>
       </div>
-    </header>
+    </div>
 
-    <main>
-      <!-- 1) HERO -->
-      <section class="nt-hero" id="top">
-        <div class="nt-shell nt-hero__grid">
-          <div class="nt-hero__text">
-            <p class="nt-hero__eyebrow">En construction · lancement progressif</p>
-            <h1 class="nt-hero__title">
-              La carte vivante<br />
-              des usages de la nature.
-            </h1>
-            <p class="nt-hero__subtitle">
-              Naterra réunit sur une même carte les activités, zones sensibles
-              et signaux de sécurité pour mieux cohabiter en forêt et à la
-              campagne – sans changer tes habitudes d’outdoor.
-            </p>
+  </div>
+</section>
 
-            <ul class="nt-hero__bullets">
-              <li>
-                Voir en direct ce qui se passe autour de toi
-                (chasse, travaux, événements, troupeaux…)
-              </li>
-              <li>
-                Être prévenu quand tu entres dans une zone sensible ou à risque
-              </li>
-              <li>
-                Partager des signaux terrain utiles aux autres usagers
-                et aux gestionnaires
-              </li>
-            </ul>
 
-            <div class="nt-hero__actions" id="hero-cta">
-              <a href="#"
-                 class="nt-btn nt-btn--primary">
-                Se connecter
-              </a>
-              <p class="nt-hero__note">
-                Naterra se construit avec des territoires pilotes&nbsp;:
-                pas de tracking caché, pas de revente de données.
-              </p>
-            </div>
-          </div>
+<!-- ============================================================
+     3 PILIERS
+     ============================================================ -->
+<section class="nt-pillars">
+  <div class="nt-container nt-pillars__grid">
+    <article class="nt-pillar">
+      <div class="nt-pillar__icon">◎</div>
+      <h3 class="nt-pillar__title">Explorer</h3>
+      <p class="nt-pillar__text">Comprendre ce qui se passe autour de soi avant de partir.</p>
+    </article>
+    <article class="nt-pillar">
+      <div class="nt-pillar__icon">◈</div>
+      <h3 class="nt-pillar__title">Pratiquer</h3>
+      <p class="nt-pillar__text">Adapter la lecture du territoire à son activité.</p>
+    </article>
+    <article class="nt-pillar">
+      <div class="nt-pillar__icon">◉</div>
+      <h3 class="nt-pillar__title">Signaler</h3>
+      <p class="nt-pillar__text">Transformer le terrain en information utile pour tous.</p>
+    </article>
+  </div>
+</section>
 
-          <div class="nt-hero__visual">
-            <div class="nt-hero-card">
-              <div class="nt-hero-card__badge">Aperçu concept</div>
-              <div class="nt-hero-card__map">
-                <div class="nt-hero-card__ring nt-hero-card__ring--main"></div>
-                <div class="nt-hero-card__ring nt-hero-card__ring--soft"></div>
-                <span class="nt-hero-card__dot nt-hero-card__dot--red"></span>
-                <span class="nt-hero-card__dot nt-hero-card__dot--amber"></span>
-                <span class="nt-hero-card__dot nt-hero-card__dot--green"></span>
-              </div>
-              <div class="nt-hero-card__rows">
-                <div class="nt-hero-row">
-                  <span class="nt-hero-row__label">Autour de toi</span>
-                  <span class="nt-hero-row__value">Activité en cours · 650 m</span>
-                </div>
-                <div class="nt-hero-row">
-                  <span class="nt-hero-row__label">Signal récent</span>
-                  <span class="nt-hero-row__value">
-                    Chemin dégradé · hier
-                  </span>
-                </div>
-                <div class="nt-hero-row">
-                  <span class="nt-hero-row__label">Mode actif</span>
-                  <span class="nt-hero-row__value">Explorer</span>
-                </div>
-              </div>
-            </div>
-          </div>
+
+<!-- ============================================================
+     EXPLORER
+     ============================================================ -->
+<section class="nt-section nt-section--light" id="explorer">
+  <div class="nt-container nt-section__split">
+
+    <div class="nt-section__text">
+      <span class="nt-eyebrow">Explorer</span>
+      <h2 class="nt-section__title">Comprendre ce qui se passe autour de soi.</h2>
+      <p class="nt-section__body">Repérez les points d'intérêt, les chemins, les zones sensibles, les informations locales et les signalements utiles avant de partir.</p>
+      <div class="nt-chips">
+        <span class="nt-chip nt-chip--green">Points d'intérêt</span>
+        <span class="nt-chip nt-chip--green">Chemins &amp; accès</span>
+        <span class="nt-chip nt-chip--amber">Zones sensibles</span>
+        <span class="nt-chip nt-chip--blue">Informations locales</span>
+        <span class="nt-chip nt-chip--green">Carte enrichie</span>
+        <span class="nt-chip nt-chip--red">Alertes utiles</span>
+      </div>
+    </div>
+
+    <div class="nt-section__visual">
+      <div class="nt-map-panel">
+        <div class="nt-map-panel__bar">
+          <span class="nt-map-panel__title">Vue autour de vous</span>
+          <span class="nt-map-panel__mode">Explorer</span>
         </div>
-      </section>
-
-      <!-- 2) À QUOI ÇA SERT CONCRÈTEMENT ? -->
-      <section class="nt-section" id="why">
-        <div class="nt-shell">
-          <div class="nt-section__header">
-            <h2>À quoi sert Naterra, sur le terrain&nbsp;?</h2>
-            <p>
-              Traduire une promesse simple en bénéfices concrets pour celles
-              et ceux qui vivent dehors – pratiquants comme organisateurs.
-            </p>
-          </div>
-
-          <div class="nt-two-cols">
-            <article class="nt-block">
-              <h3>Pratiquants</h3>
-              <p class="nt-block__lead">
-                Pour les pratiquants outdoor, Naterra ajoute une couche de
-                contexte là où tu regardes déjà ta carte.
-              </p>
-              <ul class="nt-block__list">
-                <li>
-                  Savoir où des activités sont en cours
-                  (chasse collective, événement, travaux)
-                </li>
-                <li>
-                  Éviter les zones délicates
-                  (troupeaux, chiens de protection, zones de quiétude)
-                </li>
-                <li>
-                  Signaler facilement un danger, un chemin dégradé
-                  ou une observation importante
-                </li>
-              </ul>
-            </article>
-
-            <article class="nt-block">
-              <h3>Organisateurs & gestionnaires</h3>
-              <p class="nt-block__lead">
-                Pour les organisateurs et gestionnaires, Naterra devient
-                un tableau de bord simple des usages sur le territoire.
-              </p>
-              <ul class="nt-block__list">
-                <li>
-                  Préparer et partager les zones concernées par une chasse,
-                  un événement ou des travaux
-                </li>
-                <li>
-                  Suivre en direct les sorties et activités déclarées
-                  sur ton territoire
-                </li>
-                <li>
-                  Capitaliser sur les signaux terrain
-                  (incidents, conflits d’usage, observations)
-                  pour ajuster les règles
-                </li>
-              </ul>
-            </article>
-          </div>
+        <div class="nt-map-panel__map">
+          <div class="nt-map-panel__ring nt-map-panel__ring--1"></div>
+          <div class="nt-map-panel__ring nt-map-panel__ring--2"></div>
+          <div class="nt-map-panel__pin nt-map-panel__pin--green" style="top:37%;left:41%"></div>
+          <div class="nt-map-panel__pin nt-map-panel__pin--amber" style="top:54%;left:62%"></div>
+          <div class="nt-map-panel__pin nt-map-panel__pin--red"   style="top:29%;left:65%"></div>
+          <div class="nt-map-panel__trail"></div>
         </div>
-      </section>
-
-      <!-- 3) POUR TOUS LES AMOUREUX DE L’OUTDOOR -->
-      <section class="nt-section nt-section--alt" id="outdoor">
-        <div class="nt-shell">
-          <div class="nt-section__header nt-section__header--center">
-            <h2>Pour tous les amoureux de l’outdoor, pas pour une pratique unique.</h2>
-            <p>
-              Naterra n’est pas une “app de chasse” ni une app de sport de plus.
-              C’est une infrastructure commune, pensée pour que des pratiques
-              très différentes puissent se croiser en sécurité sur la même carte,
-              avec un langage de signaux partagé.
-            </p>
+        <div class="nt-map-panel__info">
+          <div class="nt-map-panel__row">
+            <span class="nt-map-panel__label">Autour de vous</span>
+            <span class="nt-map-panel__value">3 signalements actifs</span>
           </div>
-
-          <div class="nt-tags">
-            <span class="nt-tag">Randonnée</span>
-            <span class="nt-tag">Trail</span>
-            <span class="nt-tag">VTT</span>
-            <span class="nt-tag">Cheval</span>
-            <span class="nt-tag">Chasse</span>
-            <span class="nt-tag">Forêt</span>
-            <span class="nt-tag">Agriculture</span>
-            <span class="nt-tag">Science citoyenne</span>
+          <div class="nt-map-panel__row">
+            <span class="nt-map-panel__label">Activité</span>
+            <span class="nt-map-panel__value">Chasse en cours · 800 m</span>
           </div>
-        </div>
-      </section>
-
-      <!-- 4) TEASER "MON ESPACE NATERRA" -->
-      <section class="nt-section" id="space">
-        <div class="nt-shell">
-          <div class="nt-section__header">
-            <h2>Mon espace Naterra.</h2>
-            <p>
-              Après connexion, chaque personne retrouve un espace simple,
-              centré sur sa carte, avec quelques modules évidents.
-            </p>
-          </div>
-
-          <div class="nt-modules">
-            <article class="nt-module">
-              <p class="nt-module__label">Carte live</p>
-              <p class="nt-module__text">
-                Ta position, les signaux à proximité et les activités en cours,
-                filtrés selon ton profil.
-              </p>
-            </article>
-
-            <article class="nt-module">
-              <p class="nt-module__label">Mes sorties</p>
-              <p class="nt-module__text">
-                Les sorties passées et en cours, avec les zones traversées
-                et les signaux que tu as posés.
-              </p>
-            </article>
-
-            <article class="nt-module">
-              <p class="nt-module__label">Mes territoires & événements</p>
-              <p class="nt-module__text">
-                Les territoires que tu suis ou gères, les journées de chasse
-                ou événements programmés.
-              </p>
-            </article>
-
-            <article class="nt-module">
-              <p class="nt-module__label">Signaux & observations</p>
-              <p class="nt-module__text">
-                L’historique de ce que tu as signalé sur le terrain&nbsp;:
-                dangers, incidents, observations nature, conflits d’usage.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- 5) FOOTER -->
-    <footer class="nt-footer">
-      <div class="nt-shell nt-footer__inner">
-        <div class="nt-footer__row">
-          <span class="nt-footer__logo">Naterra</span>
-        </div>
-        <div class="nt-footer__row">
-          <a href="#top">CGU</a>
-          <span>·</span>
-          <a href="#top">Confidentialité</a>
-          <span>·</span>
-          <a href="mailto:hello@naterra.io">Contact</a>
-        </div>
-        <div class="nt-footer__row nt-footer__row--fine">
-          <span>
-            © <span id="year"></span> Naterra. Projet indépendant, construit
-            avec des usagers de terrain.
-          </span>
-          <span>
-            Naterra aide à mieux partager l’information sur les usages de la
-            nature, mais ne remplace jamais la vigilance ni le respect des
-            règles locales de sécurité.
-          </span>
         </div>
       </div>
+    </div>
 
-      <script>
-        const y = document.getElementById("year");
-        if (y) y.textContent = new Date().getFullYear();
-      </script>
-    </footer>
-  </body>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PRATIQUER — CARROUSEL HORIZONTAL
+     ============================================================ -->
+<section class="nt-section nt-section--dark" id="pratiquer">
+  <div class="nt-container">
+    <div class="nt-section__head">
+      <span class="nt-eyebrow nt-eyebrow--green">Pratiquer</span>
+      <h2 class="nt-section__title nt-section__title--white">Une application pour chaque pratique.</h2>
+      <p class="nt-section__body nt-section__body--muted">Randonnée, chasse, tourisme, trail, cyclisme, équitation : Naterra adapte la lecture du territoire à votre activité.</p>
+    </div>
+  </div>
+  <div class="practice-carousel">
+    <article class="practice-card">
+      <span class="practice-card__num">01</span>
+      <h3 class="practice-card__title">Randonnée</h3>
+      <p class="practice-card__text">Créez des itinéraires adaptés à votre niveau, repérez les points d'intérêt et suivez votre progression, même sans réseau.</p>
+    </article>
+    <article class="practice-card">
+      <span class="practice-card__num">02</span>
+      <h3 class="practice-card__title">Chasse</h3>
+      <p class="practice-card__text">Cartographiez le territoire, organisez vos chasses, visualisez les participants et suivez la journée en live.</p>
+    </article>
+    <article class="practice-card">
+      <span class="practice-card__num">03</span>
+      <h3 class="practice-card__title">Tourisme</h3>
+      <p class="practice-card__text">Découvrez le patrimoine local, les lieux à visiter et composez vos balades découverte sur mesure.</p>
+    </article>
+    <article class="practice-card">
+      <span class="practice-card__num">04</span>
+      <h3 class="practice-card__title">Trail / Course</h3>
+      <p class="practice-card__text">Tracez des parcours sur mesure, analysez vos sorties et retrouvez les infos utiles avant de partir.</p>
+    </article>
+    <article class="practice-card">
+      <span class="practice-card__num">05</span>
+      <h3 class="practice-card__title">Cyclisme</h3>
+      <p class="practice-card__text">Préparez vos sorties route, gravel ou VTT avec des parcours sur mesure et les bonnes informations terrain.</p>
+    </article>
+    <article class="practice-card">
+      <span class="practice-card__num">06</span>
+      <h3 class="practice-card__title">Équitation</h3>
+      <p class="practice-card__text">Préparez des itinéraires adaptés aux chevaux, profitez des bonnes informations terrain et analysez vos sorties après chaque balade.</p>
+    </article>
+    <div class="practice-carousel__end" aria-hidden="true"></div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SIGNALER
+     ============================================================ -->
+<section class="nt-section nt-section--light" id="signaler">
+  <div class="nt-container">
+    <div class="nt-section__head">
+      <span class="nt-eyebrow">Signaler</span>
+      <h2 class="nt-section__title">Transformer le terrain en information utile.</h2>
+      <p class="nt-section__body">Partagez une information utile : danger, accès bloqué, faune, activité en cours ou observation locale.</p>
+    </div>
+    <div class="nt-signal-grid">
+      <article class="nt-signal-card">
+        <span class="nt-signal-card__badge nt-signal-card__badge--red">Danger</span>
+        <h3 class="nt-signal-card__title">Dangers immédiats</h3>
+        <p class="nt-signal-card__text">Accident, feu, arbre menaçant, éboulement, câble au sol.</p>
+      </article>
+      <article class="nt-signal-card">
+        <span class="nt-signal-card__badge nt-signal-card__badge--amber">Terrain</span>
+        <h3 class="nt-signal-card__title">Accès &amp; terrain</h3>
+        <p class="nt-signal-card__text">Chemin impraticable, route fermée, passage inondé, pont endommagé, terrain glissant.</p>
+      </article>
+      <article class="nt-signal-card">
+        <span class="nt-signal-card__badge nt-signal-card__badge--green">Faune</span>
+        <h3 class="nt-signal-card__title">Faune &amp; environnement</h3>
+        <p class="nt-signal-card__text">Chiens de protection, dépôt sauvage, troupeau en liberté, chenilles processionnaires, frelons.</p>
+      </article>
+      <article class="nt-signal-card">
+        <span class="nt-signal-card__badge nt-signal-card__badge--blue">Activité</span>
+        <h3 class="nt-signal-card__title">Activités en cours</h3>
+        <p class="nt-signal-card__text">Chasse en cours, travaux agricoles, chantier forestier.</p>
+      </article>
+      <article class="nt-signal-card nt-signal-card--wide">
+        <span class="nt-signal-card__badge nt-signal-card__badge--teal">Observation</span>
+        <h3 class="nt-signal-card__title">Observations utiles</h3>
+        <p class="nt-signal-card__text">Point de vue, spot de pique-nique, arbre remarquable, point d'eau, panneau d'information.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PRODUIT — 3 CAPTURES MOCKUP CSS
+     ============================================================ -->
+<section class="nt-section nt-section--dark">
+  <div class="nt-container">
+    <div class="nt-section__head">
+      <span class="nt-eyebrow nt-eyebrow--green">Application</span>
+      <h2 class="nt-section__title nt-section__title--white">Une carte, plusieurs lectures du terrain.</h2>
+    </div>
+    <div class="nt-screens-grid">
+
+      <div class="nt-screen-card">
+        <div class="nt-screen-card__preview nt-screen-card__preview--map">
+          <div class="nt-scr-map" aria-hidden="true">
+            <div class="nt-scr-map__ring nt-scr-map__ring--1"></div>
+            <div class="nt-scr-map__ring nt-scr-map__ring--2"></div>
+            <div class="nt-scr-map__pin nt-scr-map__pin--g" style="top:40%;left:46%"></div>
+            <div class="nt-scr-map__pin nt-scr-map__pin--r" style="top:55%;left:58%"></div>
+          </div>
+        </div>
+        <h3 class="nt-screen-card__title">Carte vivante</h3>
+        <p class="nt-screen-card__text">Voir les informations utiles autour de soi.</p>
+      </div>
+
+      <div class="nt-screen-card">
+        <div class="nt-screen-card__preview nt-screen-card__preview--territory">
+          <div class="nt-scr-territory" aria-hidden="true">
+            <div class="nt-scr-territory__zone"></div>
+            <div class="nt-scr-territory__pin" style="top:42%;left:50%"></div>
+          </div>
+        </div>
+        <h3 class="nt-screen-card__title">Territoires</h3>
+        <p class="nt-screen-card__text">Visualiser zones, points sensibles et objets terrain.</p>
+      </div>
+
+      <div class="nt-screen-card">
+        <div class="nt-screen-card__preview nt-screen-card__preview--report">
+          <div class="nt-scr-report" aria-hidden="true">
+            <div class="nt-scr-report__pin"></div>
+            <div class="nt-scr-report__pulse"></div>
+          </div>
+        </div>
+        <h3 class="nt-screen-card__title">Signalements</h3>
+        <p class="nt-screen-card__text">Partager une information géolocalisée et utile.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     DOWNLOAD
+     ============================================================ -->
+<section class="nt-download" id="download">
+  <div class="nt-container nt-download__inner">
+    <h2 class="nt-download__title">Prendre en main Naterra.</h2>
+    <p class="nt-download__body">Naterra est actuellement en bêta terrain. Installez l'app, explorez, signalez.</p>
+    <div class="nt-download__actions">
+      <!--
+        TODO: Remplacer href="#" par le lien TestFlight iOS
+        Format attendu : https://testflight.apple.com/join/XXXXXXXX
+      -->
+      <a href="#" class="nt-btn nt-btn--green nt-btn--lg">Télécharger sur iPhone</a>
+      <button class="nt-btn nt-btn--outline-white nt-btn--lg" disabled aria-disabled="true">Android bientôt disponible</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="nt-footer">
+  <div class="nt-container nt-footer__inner">
+    <div class="nt-footer__left">
+      <span class="nt-footer__brand">Naterra</span>
+      <a href="mailto:contact@naterra.app" class="nt-footer__email">contact@naterra.app</a>
+    </div>
+    <div class="nt-footer__right">
+      <nav class="nt-footer__nav">
+        <a href="#" class="nt-footer__link">CGU</a>
+        <a href="#" class="nt-footer__link">Mentions légales</a>
+        <a href="mailto:contact@naterra.app" class="nt-footer__link">Contact</a>
+      </nav>
+      <p class="nt-footer__mention">Vos données terrain restent protégées. Naterra privilégie l'information utile, contextualisée et maîtrisée.</p>
+      <p class="nt-footer__copy">© <span id="nt-year"></span> Naterra</p>
+    </div>
+  </div>
+  <script>
+    const el = document.getElementById('nt-year');
+    if (el) el.textContent = new Date().getFullYear();
+  </script>
+</footer>
+
+</body>
 </html>
