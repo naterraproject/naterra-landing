@@ -42,7 +42,7 @@
 
     <!-- Texte -->
     <div class="nt-hero__content">
-      <h1 class="nt-hero__title">Bienvenue dehors</h1>
+      <h1 class="nt-hero__title">Bienvenue dehors.</h1>
       <p class="nt-hero__tagline">Explorer, pratiquer, signaler.</p>
       <p class="nt-hero__body">Les bonnes informations, au bon endroit, au bon moment.</p>
       <div class="nt-hero__actions">
@@ -58,75 +58,78 @@
 </section>
 
 
-<!-- ============================================================
-     3 PILIERS
-     ============================================================ -->
-<section class="nt-pillars">
-  <div class="nt-container nt-pillars__grid">
-    <article class="nt-pillar">
-      <div class="nt-pillar__icon">◎</div>
-      <h3 class="nt-pillar__title">Explorer</h3>
-      <p class="nt-pillar__text">Comprendre ce qui se passe autour de soi avant de partir.</p>
-    </article>
-    <article class="nt-pillar">
-      <div class="nt-pillar__icon">◈</div>
-      <h3 class="nt-pillar__title">Pratiquer</h3>
-      <p class="nt-pillar__text">Adapter la lecture du territoire à son activité.</p>
-    </article>
-    <article class="nt-pillar">
-      <div class="nt-pillar__icon">◉</div>
-      <h3 class="nt-pillar__title">Signaler</h3>
-      <p class="nt-pillar__text">Transformer le terrain en information utile pour tous.</p>
-    </article>
-  </div>
-</section>
-
 
 <!-- ============================================================
      EXPLORER
      ============================================================ -->
-<section class="nt-section nt-section--light" id="explorer">
-  <div class="nt-container nt-section__split">
+<section id="explorer" class="nt-explorer">
 
-    <div class="nt-section__text">
-      <span class="nt-eyebrow">Explorer</span>
-      <h2 class="nt-section__title">Comprendre ce qui se passe autour de soi.</h2>
-      <p class="nt-section__body">Repérez les points d'intérêt, les chemins, les zones sensibles, les informations locales et les signalements utiles avant de partir.</p>
-      <div class="nt-chips">
-        <span class="nt-chip nt-chip--green">Points d'intérêt</span>
-        <span class="nt-chip nt-chip--green">Chemins &amp; accès</span>
-        <span class="nt-chip nt-chip--amber">Zones sensibles</span>
-        <span class="nt-chip nt-chip--blue">Informations locales</span>
-        <span class="nt-chip nt-chip--green">Carte enrichie</span>
-        <span class="nt-chip nt-chip--red">Alertes utiles</span>
-      </div>
+  <!-- Fond : gradient fallback, prêt pour explorer-background.jpg -->
+  <div class="nt-explorer__background" aria-hidden="true"></div>
+
+  <div class="nt-container nt-explorer__inner">
+
+    <!-- En-tête centré -->
+    <div class="nt-explorer__header">
+      <p class="nt-section-logo">Naterra</p>
+      <h2 class="nt-explorer__title">Explorer</h2>
+      <p class="nt-explorer__subtitle">La nature n'est jamais vide.</p>
+      <p class="nt-explorer__intro">Chemins, points d'intérêt, zones sensibles, activités en cours : Naterra rassemble les informations utiles pour mieux comprendre ce qui vous entoure.</p>
     </div>
 
-    <div class="nt-section__visual">
-      <div class="nt-map-panel">
-        <div class="nt-map-panel__bar">
-          <span class="nt-map-panel__title">Vue autour de vous</span>
-          <span class="nt-map-panel__mode">Explorer</span>
+    <!-- iPhone centré -->
+    <div class="nt-explorer__phone-wrap">
+      <img
+        class="nt-explorer__phone"
+        src="./assets/explorer-iphone.png"
+        alt="Capture de l'application Naterra montrant une carte enrichie avec itinéraire et points d'intérêt"
+      />
+    </div>
+
+    <!-- 6 boîtes fonctionnelles -->
+    <div class="nt-explorer__cards">
+      <article class="nt-explorer__card">
+        <div class="nt-explorer__card-icon nt-explorer__card-icon--green">◎</div>
+        <div>
+          <h3 class="nt-explorer__card-title">Points d'intérêt</h3>
+          <p class="nt-explorer__card-text">Repérez les lieux à découvrir autour de vous.</p>
         </div>
-        <div class="nt-map-panel__map">
-          <div class="nt-map-panel__ring nt-map-panel__ring--1"></div>
-          <div class="nt-map-panel__ring nt-map-panel__ring--2"></div>
-          <div class="nt-map-panel__pin nt-map-panel__pin--green" style="top:37%;left:41%"></div>
-          <div class="nt-map-panel__pin nt-map-panel__pin--amber" style="top:54%;left:62%"></div>
-          <div class="nt-map-panel__pin nt-map-panel__pin--red"   style="top:29%;left:65%"></div>
-          <div class="nt-map-panel__trail"></div>
+      </article>
+      <article class="nt-explorer__card">
+        <div class="nt-explorer__card-icon nt-explorer__card-icon--green">⟿</div>
+        <div>
+          <h3 class="nt-explorer__card-title">Chemins &amp; accès</h3>
+          <p class="nt-explorer__card-text">Visualisez sentiers, routes et passages utiles.</p>
         </div>
-        <div class="nt-map-panel__info">
-          <div class="nt-map-panel__row">
-            <span class="nt-map-panel__label">Autour de vous</span>
-            <span class="nt-map-panel__value">3 signalements actifs</span>
-          </div>
-          <div class="nt-map-panel__row">
-            <span class="nt-map-panel__label">Activité</span>
-            <span class="nt-map-panel__value">Chasse en cours · 800 m</span>
-          </div>
+      </article>
+      <article class="nt-explorer__card">
+        <div class="nt-explorer__card-icon nt-explorer__card-icon--amber">⚠</div>
+        <div>
+          <h3 class="nt-explorer__card-title">Zones sensibles</h3>
+          <p class="nt-explorer__card-text">Identifiez les secteurs à connaître avant de partir.</p>
         </div>
-      </div>
+      </article>
+      <article class="nt-explorer__card">
+        <div class="nt-explorer__card-icon nt-explorer__card-icon--green">◈</div>
+        <div>
+          <h3 class="nt-explorer__card-title">Itinéraires multi-activités</h3>
+          <p class="nt-explorer__card-text">Générez des parcours adaptés à votre pratique : randonnée, trail, cyclisme, équitation et plus encore.</p>
+        </div>
+      </article>
+      <article class="nt-explorer__card">
+        <div class="nt-explorer__card-icon nt-explorer__card-icon--blue">◉</div>
+        <div>
+          <h3 class="nt-explorer__card-title">Carte enrichie</h3>
+          <p class="nt-explorer__card-text">Toutes les informations utiles réunies au même endroit.</p>
+        </div>
+      </article>
+      <article class="nt-explorer__card">
+        <div class="nt-explorer__card-icon nt-explorer__card-icon--gray">◌</div>
+        <div>
+          <h3 class="nt-explorer__card-title">Mode hors réseau</h3>
+          <p class="nt-explorer__card-text">Préparez vos sorties et consultez vos repères même sans réseau.</p>
+        </div>
+      </article>
     </div>
 
   </div>

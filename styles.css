@@ -577,58 +577,6 @@ button {
 .nt-float-card--2 { bottom: 22%; right: -8px; }
 
 /* ================================================================
-   PILIERS
-   ================================================================ */
-.nt-pillars {
-  background: var(--nt-white);
-  padding: 72px 0;
-  border-top: 1px solid rgba(0,0,0,0.05);
-}
-
-.nt-pillars__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-
-.nt-pillar {
-  background: var(--nt-bg);
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: var(--r-xl);
-  padding: 30px 26px;
-  box-shadow: var(--sh-sm);
-  transition: box-shadow 0.15s;
-}
-.nt-pillar:hover { box-shadow: var(--sh-md); }
-
-.nt-pillar__icon {
-  width: 46px;
-  height: 46px;
-  background: var(--nt-green-dim);
-  border-radius: var(--r-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  color: var(--nt-green);
-  margin-bottom: 16px;
-}
-
-.nt-pillar__title {
-  font-size: 19px;
-  font-weight: 700;
-  color: var(--nt-black);
-  letter-spacing: -0.01em;
-  margin-bottom: 8px;
-}
-
-.nt-pillar__text {
-  font-size: 14px;
-  color: var(--nt-gray);
-  line-height: 1.65;
-}
-
-/* ================================================================
    SECTIONS — base
    ================================================================ */
 .nt-section {
@@ -661,129 +609,145 @@ button {
 }
 .nt-section__body--muted { color: rgba(255,255,255,0.48); }
 
-/* Split layout (Explorer) */
-.nt-section__split {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 48px;
-  align-items: center;
-}
-
 /* ================================================================
-   CHIPS (Explorer)
+   SECTION EXPLORER
    ================================================================ */
-.nt-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 24px;
-}
-
-.nt-chip {
-  font-size: 13px;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: var(--r-pill);
-}
-.nt-chip--green { background: var(--nt-green-dim); color: var(--nt-green); border: 1px solid rgba(40,226,15,0.22); }
-.nt-chip--amber { background: var(--nt-amber-dim); color: var(--nt-amber); border: 1px solid rgba(217,119,6,0.22); }
-.nt-chip--red   { background: var(--nt-red-dim);   color: var(--nt-red);   border: 1px solid rgba(224,48,48,0.22); }
-.nt-chip--blue  { background: var(--nt-blue-dim);  color: var(--nt-blue);  border: 1px solid rgba(37,99,235,0.22); }
-
-/* ================================================================
-   MAP PANEL (section Explorer visuel)
-   ================================================================ */
-.nt-map-panel {
-  border-radius: var(--r-xl);
-  overflow: hidden;
-  box-shadow: var(--sh-lg);
-  background: #0d2018;
-}
-
-.nt-map-panel__bar {
-  background: rgba(5,8,7,0.90);
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-  padding: 14px 18px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nt-map-panel__title {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--nt-white);
-}
-
-.nt-map-panel__mode {
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--nt-green);
-  background: var(--nt-green-dim);
-  border: 1px solid rgba(40,226,15,0.22);
-  padding: 3px 10px;
-  border-radius: var(--r-pill);
-}
-
-.nt-map-panel__map {
+.nt-explorer {
   position: relative;
-  height: 220px;
-  background:
-    radial-gradient(circle at 30% 42%, #2a5c38 0%, transparent 52%),
-    radial-gradient(circle at 68% 56%, #1f4a2c 0%, transparent 48%),
-    linear-gradient(158deg, #0e2c19 0%, #1c4829 60%, #102c1c 100%);
   overflow: hidden;
+  padding: 88px 0 72px;
 }
 
-.nt-map-panel__ring {
+/* Fond — gradient fallback propre.
+   Pour activer explorer-background.jpg dès qu'il est disponible,
+   décommenter les trois lignes suivantes dans .nt-explorer__background : */
+.nt-explorer__background {
   position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(40,226,15,0.12);
-  transform: translate(-50%,-50%);
-}
-.nt-map-panel__ring--1 { width: 200%; height: 160%; top: 50%; left: 40%; }
-.nt-map-panel__ring--2 { width: 120%; height: 96%;  top: 50%; left: 38%; }
-
-.nt-map-panel__pin {
-  position: absolute;
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.85);
-  transform: translate(-50%,-50%);
-}
-.nt-map-panel__pin--green { background: var(--nt-green); }
-.nt-map-panel__pin--amber { background: var(--nt-amber); }
-.nt-map-panel__pin--red   { background: var(--nt-red); }
-
-.nt-map-panel__trail {
-  position: absolute;
-  width: 48%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(40,226,15,0.42), transparent);
-  top: 55%;
-  left: 26%;
-  border-radius: 2px;
-  transform: rotate(-8deg);
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  /* background-image: url('./assets/explorer-background.jpg'); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  background: linear-gradient(175deg, #eef2ec 0%, #e4ebe1 55%, #dde6da 100%);
 }
 
-.nt-map-panel__info {
-  background: rgba(5,8,7,0.92);
-  border-top: 1px solid rgba(255,255,255,0.07);
-  padding: 14px 18px;
+.nt-explorer__inner {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  align-items: center;
 }
 
-.nt-map-panel__row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
+/* En-tête centré */
+.nt-explorer__header {
+  text-align: center;
+  max-width: 680px;
+  margin-bottom: 48px;
 }
-.nt-map-panel__label { color: rgba(255,255,255,0.38); }
-.nt-map-panel__value { color: var(--nt-white); font-weight: 600; }
+
+.nt-section-logo {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--nt-green);
+  margin-bottom: 10px;
+}
+
+.nt-explorer__title {
+  font-size: clamp(38px, 6vw, 60px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--nt-black);
+  margin-bottom: 12px;
+}
+
+.nt-explorer__subtitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--nt-green);
+  margin-bottom: 14px;
+}
+
+.nt-explorer__intro {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--nt-gray);
+  margin: 0 auto;
+  max-width: 520px;
+}
+
+/* iPhone centré */
+.nt-explorer__phone-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.nt-explorer__phone {
+  width: min(320px, 86vw);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 24px 48px rgba(0,0,0,0.16));
+}
+
+/* 6 boîtes */
+.nt-explorer__cards {
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.nt-explorer__card {
+  background: rgba(255,255,255,0.90);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: var(--r-lg);
+  padding: 16px 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: box-shadow 0.14s;
+}
+.nt-explorer__card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.10); }
+
+.nt-explorer__card-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.nt-explorer__card-icon--green { background: var(--nt-green-dim); color: var(--nt-green); }
+.nt-explorer__card-icon--amber { background: var(--nt-amber-dim); color: var(--nt-amber); }
+.nt-explorer__card-icon--blue  { background: var(--nt-blue-dim);  color: var(--nt-blue); }
+.nt-explorer__card-icon--gray  { background: rgba(0,0,0,0.05);    color: var(--nt-gray); }
+
+.nt-explorer__card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--nt-black);
+  letter-spacing: -0.01em;
+  margin-bottom: 3px;
+}
+
+.nt-explorer__card-text {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--nt-gray);
+  margin: 0;
+}
 
 /* ================================================================
    PRACTICE CAROUSEL
@@ -1168,10 +1132,6 @@ button {
    RESPONSIVE — tablette 640px+
    ================================================================ */
 @media (min-width: 640px) {
-  .nt-pillars__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .nt-signal-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1190,10 +1150,9 @@ button {
     min-height: calc(90vh - var(--header-h));
   }
 
-  .nt-section__split {
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-  }
+  /* Explorer : iPhone plus grand sur desktop */
+  .nt-explorer__phone { width: min(380px, 55vw); }
+  .nt-explorer__cards { grid-template-columns: 1fr 1fr; }
 
   /* Aligner le début du carousel avec le container sur grand écran */
   .practice-carousel {
@@ -1229,4 +1188,8 @@ button {
   .nt-map__ring--1 { width: 320px; height: 270px; }
   .nt-map__ring--2 { width: 216px; height: 178px; }
   .nt-map__ring--3 { width: 120px; height: 98px; }
+
+  /* Explorer : grille 3 colonnes sur grand écran */
+  .nt-explorer__phone { width: 400px; }
+  .nt-explorer__cards { grid-template-columns: repeat(3, 1fr); }
 }
