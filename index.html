@@ -149,48 +149,71 @@
 
 
 <!-- ============================================================
-     PRATIQUER — CARROUSEL HORIZONTAL
+     PRATIQUER — CARROUSEL PHOTO
      ============================================================ -->
-<section class="nt-section nt-section--dark" id="pratiquer">
-  <div class="nt-container">
-    <div class="nt-section__head">
-      <span class="nt-eyebrow nt-eyebrow--green">Pratiquer</span>
-      <h2 class="nt-section__title nt-section__title--white">Une application pour chaque pratique.</h2>
-      <p class="nt-section__body nt-section__body--muted">Randonnée, chasse, tourisme, trail, cyclisme, équitation : Naterra adapte la lecture du territoire à votre activité.</p>
-    </div>
+<section id="pratiquer" class="nt-practice">
+  <div class="nt-container nt-practice__header">
+    <p class="nt-practice__eyebrow">Pratiquer</p>
+    <h2 class="nt-practice__title">Une nature, plusieurs façons de la vivre.</h2>
+    <p class="nt-practice__text">Randonnée, chasse, tourisme, trail, cyclisme, équitation : Naterra adapte la lecture du territoire à votre pratique.</p>
   </div>
-  <div class="practice-carousel">
-    <article class="practice-card">
-      <span class="practice-card__num">01</span>
-      <h3 class="practice-card__title">Randonnée</h3>
-      <p class="practice-card__text">Créez des itinéraires adaptés à votre niveau, repérez les points d'intérêt et suivez votre progression, même sans réseau.</p>
+
+  <div class="nt-practice__carousel" aria-label="Pratiques disponibles dans Naterra">
+
+    <article class="nt-practice-card">
+      <img class="nt-practice-card__image" src="./assets/practice-cards/randonnee.jpg" alt="Randonneur sur un sentier naturel" loading="lazy" />
+      <div class="nt-practice-card__overlay" aria-hidden="true"></div>
+      <div class="nt-practice-card__content">
+        <span class="nt-practice-card__tag">Randonnée</span>
+        <p class="nt-practice-card__text">Créez des itinéraires adaptés, repérez les points utiles et progressez même hors réseau.</p>
+      </div>
     </article>
-    <article class="practice-card">
-      <span class="practice-card__num">02</span>
-      <h3 class="practice-card__title">Chasse</h3>
-      <p class="practice-card__text">Cartographiez le territoire, organisez vos chasses, visualisez les participants et suivez la journée en live.</p>
+
+    <article class="nt-practice-card">
+      <img class="nt-practice-card__image" src="./assets/practice-cards/chasse.jpg" alt="Territoire forestier utilisé pour organiser une chasse" loading="lazy" />
+      <div class="nt-practice-card__overlay" aria-hidden="true"></div>
+      <div class="nt-practice-card__content">
+        <span class="nt-practice-card__tag">Chasse</span>
+        <p class="nt-practice-card__text">Organisez vos chasses, suivez les participants en live et alertez les usagers proches.</p>
+      </div>
     </article>
-    <article class="practice-card">
-      <span class="practice-card__num">03</span>
-      <h3 class="practice-card__title">Tourisme</h3>
-      <p class="practice-card__text">Découvrez le patrimoine local, les lieux à visiter et composez vos balades découverte sur mesure.</p>
+
+    <article class="nt-practice-card">
+      <img class="nt-practice-card__image" src="./assets/practice-cards/tourisme.jpg" alt="Patrimoine local et balade découverte" loading="lazy" />
+      <div class="nt-practice-card__overlay" aria-hidden="true"></div>
+      <div class="nt-practice-card__content">
+        <span class="nt-practice-card__tag">Tourisme</span>
+        <p class="nt-practice-card__text">Découvrez le patrimoine local, trouvez les lieux à visiter, composez vos balades nature.</p>
+      </div>
     </article>
-    <article class="practice-card">
-      <span class="practice-card__num">04</span>
-      <h3 class="practice-card__title">Trail / Course</h3>
-      <p class="practice-card__text">Tracez des parcours sur mesure, analysez vos sorties et retrouvez les infos utiles avant de partir.</p>
+
+    <article class="nt-practice-card">
+      <img class="nt-practice-card__image" src="./assets/practice-cards/trail-course.jpg" alt="Coureur sur un sentier de trail" loading="lazy" />
+      <div class="nt-practice-card__overlay" aria-hidden="true"></div>
+      <div class="nt-practice-card__content">
+        <span class="nt-practice-card__tag">Trail / Course</span>
+        <p class="nt-practice-card__text">Tracez vos parcours, analysez vos sorties et retrouvez les infos utiles avant de partir.</p>
+      </div>
     </article>
-    <article class="practice-card">
-      <span class="practice-card__num">05</span>
-      <h3 class="practice-card__title">Cyclisme</h3>
-      <p class="practice-card__text">Préparez vos sorties route, gravel ou VTT avec des parcours sur mesure et les bonnes informations terrain.</p>
+
+    <article class="nt-practice-card">
+      <img class="nt-practice-card__image" src="./assets/practice-cards/cyclisme.jpg" alt="Cycliste sur une route ou un chemin nature" loading="lazy" />
+      <div class="nt-practice-card__overlay" aria-hidden="true"></div>
+      <div class="nt-practice-card__content">
+        <span class="nt-practice-card__tag">Cyclisme</span>
+        <p class="nt-practice-card__text">Préparez vos sorties route, gravel ou VTT avec les bonnes informations du terrain local.</p>
+      </div>
     </article>
-    <article class="practice-card">
-      <span class="practice-card__num">06</span>
-      <h3 class="practice-card__title">Équitation</h3>
-      <p class="practice-card__text">Préparez des itinéraires adaptés aux chevaux, profitez des bonnes informations terrain et analysez vos sorties après chaque balade.</p>
+
+    <article class="nt-practice-card">
+      <img class="nt-practice-card__image" src="./assets/practice-cards/equitation.jpg" alt="Cavalier sur un chemin en pleine nature" loading="lazy" />
+      <div class="nt-practice-card__overlay" aria-hidden="true"></div>
+      <div class="nt-practice-card__content">
+        <span class="nt-practice-card__tag">Équitation</span>
+        <p class="nt-practice-card__text">Préparez vos itinéraires à cheval et consultez les infos utiles avant de partir dehors.</p>
+      </div>
     </article>
-    <div class="practice-carousel__end" aria-hidden="true"></div>
+
   </div>
 </section>
 
@@ -198,39 +221,56 @@
 <!-- ============================================================
      SIGNALER
      ============================================================ -->
-<section class="nt-section nt-section--light" id="signaler">
+<section id="signaler" class="nt-reports">
   <div class="nt-container">
-    <div class="nt-section__head">
-      <span class="nt-eyebrow">Signaler</span>
-      <h2 class="nt-section__title">Transformer le terrain en information utile.</h2>
-      <p class="nt-section__body">Partagez une information utile : danger, accès bloqué, faune, activité en cours ou observation locale.</p>
-    </div>
-    <div class="nt-signal-grid">
-      <article class="nt-signal-card">
-        <span class="nt-signal-card__badge nt-signal-card__badge--red">Danger</span>
-        <h3 class="nt-signal-card__title">Dangers immédiats</h3>
-        <p class="nt-signal-card__text">Accident, feu, arbre menaçant, éboulement, câble au sol.</p>
-      </article>
-      <article class="nt-signal-card">
-        <span class="nt-signal-card__badge nt-signal-card__badge--amber">Terrain</span>
-        <h3 class="nt-signal-card__title">Accès &amp; terrain</h3>
-        <p class="nt-signal-card__text">Chemin impraticable, route fermée, passage inondé, pont endommagé, terrain glissant.</p>
-      </article>
-      <article class="nt-signal-card">
-        <span class="nt-signal-card__badge nt-signal-card__badge--green">Faune</span>
-        <h3 class="nt-signal-card__title">Faune &amp; environnement</h3>
-        <p class="nt-signal-card__text">Chiens de protection, dépôt sauvage, troupeau en liberté, chenilles processionnaires, frelons.</p>
-      </article>
-      <article class="nt-signal-card">
-        <span class="nt-signal-card__badge nt-signal-card__badge--blue">Activité</span>
-        <h3 class="nt-signal-card__title">Activités en cours</h3>
-        <p class="nt-signal-card__text">Chasse en cours, travaux agricoles, chantier forestier.</p>
-      </article>
-      <article class="nt-signal-card nt-signal-card--wide">
-        <span class="nt-signal-card__badge nt-signal-card__badge--teal">Observation</span>
-        <h3 class="nt-signal-card__title">Observations utiles</h3>
-        <p class="nt-signal-card__text">Point de vue, spot de pique-nique, arbre remarquable, point d'eau, panneau d'information.</p>
-      </article>
+    <div class="nt-reports__layout">
+
+      <!-- Colonne texte -->
+      <div class="nt-reports__copy">
+        <span class="nt-eyebrow">Signaler</span>
+        <h2 class="nt-reports__title">Transformer le terrain en information utile.</h2>
+        <p class="nt-reports__body">Partagez ce que vous voyez : danger immédiat, accès bloqué, faune, activité en cours ou observation locale. Chaque signalement aide les autres.</p>
+      </div>
+
+      <!-- Carrousel automatique CSS -->
+      <div class="nt-reports-carousel" aria-label="Aperçu de l'app Naterra — Signaler">
+
+        <article class="nt-report-slide">
+          <img src="./assets/reports-carousel/danger-immediat.png" alt="Exemple de signalement de danger immédiat dans l'application Naterra" loading="lazy" />
+          <div class="nt-report-slide__caption">
+            <span class="nt-report-slide__tag">Dangers immédiats</span>
+          </div>
+        </article>
+
+        <article class="nt-report-slide">
+          <img src="./assets/reports-carousel/acces-terrain.png" alt="Exemple de signalement d'accès ou terrain dans l'application Naterra" loading="lazy" />
+          <div class="nt-report-slide__caption">
+            <span class="nt-report-slide__tag">Accès &amp; terrain</span>
+          </div>
+        </article>
+
+        <article class="nt-report-slide">
+          <img src="./assets/reports-carousel/faune-environnement.png" alt="Exemple de signalement de faune et environnement dans l'application Naterra" loading="lazy" />
+          <div class="nt-report-slide__caption">
+            <span class="nt-report-slide__tag">Faune &amp; environnement</span>
+          </div>
+        </article>
+
+        <article class="nt-report-slide">
+          <img src="./assets/reports-carousel/activites-en-cours.png" alt="Exemple de signalement d'activités en cours dans l'application Naterra" loading="lazy" />
+          <div class="nt-report-slide__caption">
+            <span class="nt-report-slide__tag">Activités en cours</span>
+          </div>
+        </article>
+
+        <article class="nt-report-slide">
+          <img src="./assets/reports-carousel/observations-utiles.png" alt="Exemple de signalement d'observations utiles dans l'application Naterra" loading="lazy" />
+          <div class="nt-report-slide__caption">
+            <span class="nt-report-slide__tag">Observations utiles</span>
+          </div>
+        </article>
+
+      </div>
     </div>
   </div>
 </section>
