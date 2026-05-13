@@ -1021,137 +1021,97 @@ button {
 }
 
 /* ================================================================
-   PRODUCT SCREENS GRID
+   APPLICATION — FEATURES CAROUSEL
    ================================================================ */
-.nt-screens-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+#app {
+  overflow-x: hidden;
 }
 
-.nt-screen-card {
+.nt-app-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding-bottom: 24px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.14) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nt-app-carousel::-webkit-scrollbar { height: 3px; }
+.nt-app-carousel::-webkit-scrollbar-track { background: transparent; }
+.nt-app-carousel::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.14);
+  border-radius: 2px;
+}
+
+.nt-app-card {
+  flex: 0 0 340px;
+  scroll-snap-align: start;
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: var(--r-xl);
+  border-radius: 28px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: border-color 0.15s;
 }
-.nt-screen-card:hover { border-color: rgba(255,255,255,0.14); }
+.nt-app-card:hover { border-color: rgba(255,255,255,0.14); }
 
-.nt-screen-card__preview {
-  height: 220px;
-  position: relative;
+.nt-app-card__image-wrap {
+  height: 460px;
+  background: rgba(255,255,255,0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
+}
+
+.nt-app-card__image {
+  width: auto;
+  max-width: 240px;
+  max-height: 440px;
+  object-fit: contain;
+  display: block;
+}
+
+.nt-app-card__body {
+  padding: 24px 26px 28px;
+  flex: 1;
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nt-app-card__badge {
+  display: inline-flex;
+  align-self: flex-start;
   align-items: center;
-  justify-content: center;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(40, 226, 15, 0.15);
+  border: 1px solid rgba(40, 226, 15, 0.22);
+  color: #28e20f;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  line-height: 1;
 }
 
-.nt-screen-card__preview--map {
-  background:
-    radial-gradient(circle at 32% 42%, #2a5c38 0%, transparent 52%),
-    linear-gradient(158deg, #0e2c19 0%, #1c4829 100%);
-}
-.nt-screen-card__preview--territory {
-  background:
-    radial-gradient(circle at 65% 45%, #1d3f2c 0%, transparent 50%),
-    linear-gradient(148deg, #0a1e14 0%, #172e1e 100%);
-}
-.nt-screen-card__preview--report {
-  background:
-    radial-gradient(circle at 45% 55%, #2a1a0e 0%, transparent 50%),
-    linear-gradient(158deg, #141008 0%, #1e160a 100%);
+.nt-app-card__title {
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
 }
 
-/* Mockup CSS carte vivante */
-.nt-scr-map {
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-.nt-scr-map__ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 1.5px solid rgba(40,226,15,0.18);
-  transform: translate(-50%,-50%);
-}
-.nt-scr-map__ring--1 { width: 140px; height: 140px; top: 50%; left: 50%; }
-.nt-scr-map__ring--2 { width: 88px;  height: 88px;  top: 50%; left: 50%; }
-.nt-scr-map__pin {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 2px solid white;
-  transform: translate(-50%,-50%);
-}
-.nt-scr-map__pin--g { background: var(--nt-green); }
-.nt-scr-map__pin--r { background: var(--nt-red); }
-
-/* Mockup CSS territoire */
-.nt-scr-territory {
-  position: relative;
-  width: 100px;
-  height: 70px;
-}
-.nt-scr-territory__zone {
-  position: absolute;
-  inset: 0;
-  border: 2px solid rgba(40,226,15,0.28);
-  border-radius: 14px;
-  background: rgba(40,226,15,0.06);
-}
-.nt-scr-territory__pin {
-  position: absolute;
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: var(--nt-green);
-  border: 2px solid white;
-  transform: translate(-50%,-50%);
-}
-
-/* Mockup CSS signalement */
-.nt-scr-report {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.nt-scr-report__pin {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--nt-red);
-  border: 2.5px solid white;
-  position: relative;
-  z-index: 2;
-}
-.nt-scr-report__pulse {
-  position: absolute;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(224,48,48,0.30);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-
-.nt-screen-card__title {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--nt-white);
-  padding: 18px 20px 4px;
-  letter-spacing: -0.01em;
-}
-
-.nt-screen-card__text {
-  font-size: 13px;
-  color: rgba(255,255,255,0.42);
-  padding: 0 20px 20px;
+.nt-app-card__text {
+  margin: 0;
+  color: rgba(255,255,255,0.50);
+  font-size: 15px;
   line-height: 1.55;
 }
 
@@ -1295,6 +1255,11 @@ button {
     flex-basis: 82vw;
     height: 500px;
   }
+  .nt-app-card {
+    flex: 0 0 84vw;
+  }
+  .nt-app-card__image-wrap { height: 380px; }
+  .nt-app-card__image { max-width: 200px; max-height: 360px; }
 }
 
 @media (min-width: 640px) {
@@ -1332,10 +1297,6 @@ button {
   /* Pratiquer : padding du carousel aligné sur le container */
   .nt-practice__carousel {
     padding-left: max(24px, calc((100vw - 1180px) / 2));
-  }
-
-  .nt-screens-grid {
-    grid-template-columns: repeat(3, 1fr);
   }
 
   .nt-footer__inner {

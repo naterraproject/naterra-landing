@@ -287,50 +287,87 @@
 
 
 <!-- ============================================================
-     PRODUIT — 3 CAPTURES MOCKUP CSS
+     APPLICATION — FEATURES CLÉS
      ============================================================ -->
-<section class="nt-section nt-section--dark">
+<section class="nt-section nt-section--dark" id="app">
   <div class="nt-container">
     <div class="nt-section__head">
       <span class="nt-eyebrow nt-eyebrow--green">Application</span>
-      <h2 class="nt-section__title nt-section__title--white">Une carte, plusieurs lectures du terrain.</h2>
+      <h2 class="nt-section__title nt-section__title--white">Tout le terrain dans une seule app.</h2>
+      <p class="nt-section__body nt-section__body--muted">Carte, signalements, alertes, live, itinéraires et territoires : Naterra rassemble les informations utiles pour préparer, pratiquer et partager vos sorties.</p>
     </div>
-    <div class="nt-screens-grid">
+    <div class="nt-app-carousel">
 
-      <div class="nt-screen-card">
-        <div class="nt-screen-card__preview nt-screen-card__preview--map">
-          <div class="nt-scr-map" aria-hidden="true">
-            <div class="nt-scr-map__ring nt-scr-map__ring--1"></div>
-            <div class="nt-scr-map__ring nt-scr-map__ring--2"></div>
-            <div class="nt-scr-map__pin nt-scr-map__pin--g" style="top:40%;left:46%"></div>
-            <div class="nt-scr-map__pin nt-scr-map__pin--r" style="top:55%;left:58%"></div>
-          </div>
+      <article class="nt-app-card">
+        <div class="nt-app-card__image-wrap">
+          <img class="nt-app-card__image" src="./assets/screens/carte-vivante.png" alt="Carte vivante Naterra" loading="lazy" />
         </div>
-        <h3 class="nt-screen-card__title">Carte vivante</h3>
-        <p class="nt-screen-card__text">Voir les informations utiles autour de soi.</p>
-      </div>
+        <div class="nt-app-card__body">
+          <h3 class="nt-app-card__title">Carte vivante</h3>
+          <p class="nt-app-card__text">Visualisez les lieux utiles, zones sensibles, activités en cours et signalements terrain autour de vous.</p>
+        </div>
+      </article>
 
-      <div class="nt-screen-card">
-        <div class="nt-screen-card__preview nt-screen-card__preview--territory">
-          <div class="nt-scr-territory" aria-hidden="true">
-            <div class="nt-scr-territory__zone"></div>
-            <div class="nt-scr-territory__pin" style="top:42%;left:50%"></div>
-          </div>
+      <article class="nt-app-card">
+        <div class="nt-app-card__image-wrap">
+          <img class="nt-app-card__image" src="./assets/screens/publications-officielles.png" alt="Publications officielles Naterra" loading="lazy" />
         </div>
-        <h3 class="nt-screen-card__title">Territoires</h3>
-        <p class="nt-screen-card__text">Visualiser zones, points sensibles et objets terrain.</p>
-      </div>
+        <div class="nt-app-card__body">
+          <h3 class="nt-app-card__title">Publications officielles</h3>
+          <p class="nt-app-card__text">Recevez les informations publiées par les territoires, organisateurs ou acteurs locaux : fermeture, danger, accès ou message important.</p>
+          <span class="nt-app-card__badge">Bientôt</span>
+        </div>
+      </article>
 
-      <div class="nt-screen-card">
-        <div class="nt-screen-card__preview nt-screen-card__preview--report">
-          <div class="nt-scr-report" aria-hidden="true">
-            <div class="nt-scr-report__pin"></div>
-            <div class="nt-scr-report__pulse"></div>
-          </div>
+      <article class="nt-app-card">
+        <div class="nt-app-card__image-wrap">
+          <img class="nt-app-card__image" src="./assets/screens/alertes-proximite.png" alt="Alertes de proximité Naterra" loading="lazy" />
         </div>
-        <h3 class="nt-screen-card__title">Signalements</h3>
-        <p class="nt-screen-card__text">Partager une information géolocalisée et utile.</p>
-      </div>
+        <div class="nt-app-card__body">
+          <h3 class="nt-app-card__title">Alertes de proximité</h3>
+          <p class="nt-app-card__text">Soyez prévenu dans l'app lorsqu'un risque important est détecté près de vous ou de votre activité.</p>
+        </div>
+      </article>
+
+      <article class="nt-app-card">
+        <div class="nt-app-card__image-wrap">
+          <img class="nt-app-card__image" src="./assets/screens/evenements-activites-live.png" alt="Événements et activités live Naterra" loading="lazy" />
+        </div>
+        <div class="nt-app-card__body">
+          <h3 class="nt-app-card__title">Événements &amp; activités live</h3>
+          <p class="nt-app-card__text">Lancez une sortie ou coordonnez un événement avec positions live, participants et informations utiles sur la carte.</p>
+        </div>
+      </article>
+
+      <article class="nt-app-card">
+        <div class="nt-app-card__image-wrap">
+          <img class="nt-app-card__image" src="./assets/screens/generateur-itineraire.png" alt="Générateur d'itinéraire Naterra" loading="lazy" />
+        </div>
+        <div class="nt-app-card__body">
+          <h3 class="nt-app-card__title">Générateur d'itinéraire</h3>
+          <p class="nt-app-card__text">Préparez des parcours adaptés à votre pratique, au terrain et aux points d'intérêt autour de vous.</p>
+        </div>
+      </article>
+
+      <article class="nt-app-card">
+        <div class="nt-app-card__image-wrap">
+          <img class="nt-app-card__image" src="./assets/screens/editeur-territoire.png" alt="Éditeur de territoire Naterra" loading="lazy" />
+        </div>
+        <div class="nt-app-card__body">
+          <h3 class="nt-app-card__title">Éditeur de territoire</h3>
+          <p class="nt-app-card__text">Créez, organisez et partagez un territoire lisible avec ses zones, accès, points clés et informations terrain.</p>
+        </div>
+      </article>
+
+      <article class="nt-app-card">
+        <div class="nt-app-card__image-wrap">
+          <img class="nt-app-card__image" src="./assets/screens/patrimoine-decouvertes.png" alt="Patrimoine et découvertes Naterra" loading="lazy" />
+        </div>
+        <div class="nt-app-card__body">
+          <h3 class="nt-app-card__title">Patrimoine &amp; découvertes</h3>
+          <p class="nt-app-card__text">Repérez les lieux remarquables, le patrimoine local et les points d'intérêt à découvrir dehors.</p>
+        </div>
+      </article>
 
     </div>
   </div>
