@@ -60,79 +60,91 @@
 
 
 <!-- ============================================================
-     EXPLORER
+     EXPLORER — contenu + 6 boîtes
      ============================================================ -->
 <section id="explorer" class="nt-explorer">
+  <div class="nt-container nt-explorer__intro">
 
-  <!-- Fond : gradient fallback, prêt pour explorer-background.jpg -->
-  <div class="nt-explorer__background" aria-hidden="true"></div>
+    <p class="nt-explorer__eyebrow">Explorer</p>
+    <h2 class="nt-explorer__title">La nature n'est jamais vide.</h2>
+    <p class="nt-explorer__text">Chemins, points d'intérêt, zones sensibles, activités en cours : Naterra rassemble les informations utiles pour mieux comprendre ce qui vous entoure.</p>
 
-  <div class="nt-container nt-explorer__inner">
-
-    <!-- En-tête centré -->
-    <div class="nt-explorer__header">
-      <p class="nt-section-logo">Naterra</p>
-      <h2 class="nt-explorer__title">Explorer</h2>
-      <p class="nt-explorer__subtitle">La nature n'est jamais vide.</p>
-      <p class="nt-explorer__intro">Chemins, points d'intérêt, zones sensibles, activités en cours : Naterra rassemble les informations utiles pour mieux comprendre ce qui vous entoure.</p>
-    </div>
-
-    <!-- iPhone centré -->
-    <div class="nt-explorer__phone-wrap">
-      <img
-        class="nt-explorer__phone"
-        src="./assets/explorer-iphone.png"
-        alt="Capture de l'application Naterra montrant une carte enrichie avec itinéraire et points d'intérêt"
-      />
-    </div>
-
-    <!-- 6 boîtes fonctionnelles -->
     <div class="nt-explorer__cards">
-      <article class="nt-explorer__card">
-        <div class="nt-explorer__card-icon nt-explorer__card-icon--green">◎</div>
-        <div>
-          <h3 class="nt-explorer__card-title">Points d'intérêt</h3>
-          <p class="nt-explorer__card-text">Repérez les lieux à découvrir autour de vous.</p>
-        </div>
-      </article>
-      <article class="nt-explorer__card">
-        <div class="nt-explorer__card-icon nt-explorer__card-icon--green">⟿</div>
-        <div>
-          <h3 class="nt-explorer__card-title">Chemins &amp; accès</h3>
-          <p class="nt-explorer__card-text">Visualisez sentiers, routes et passages utiles.</p>
-        </div>
-      </article>
-      <article class="nt-explorer__card">
-        <div class="nt-explorer__card-icon nt-explorer__card-icon--amber">⚠</div>
-        <div>
-          <h3 class="nt-explorer__card-title">Zones sensibles</h3>
-          <p class="nt-explorer__card-text">Identifiez les secteurs à connaître avant de partir.</p>
-        </div>
-      </article>
-      <article class="nt-explorer__card">
-        <div class="nt-explorer__card-icon nt-explorer__card-icon--green">◈</div>
-        <div>
-          <h3 class="nt-explorer__card-title">Itinéraires multi-activités</h3>
-          <p class="nt-explorer__card-text">Générez des parcours adaptés à votre pratique : randonnée, trail, cyclisme, équitation et plus encore.</p>
-        </div>
-      </article>
-      <article class="nt-explorer__card">
-        <div class="nt-explorer__card-icon nt-explorer__card-icon--blue">◉</div>
-        <div>
-          <h3 class="nt-explorer__card-title">Carte enrichie</h3>
-          <p class="nt-explorer__card-text">Toutes les informations utiles réunies au même endroit.</p>
-        </div>
-      </article>
-      <article class="nt-explorer__card">
-        <div class="nt-explorer__card-icon nt-explorer__card-icon--gray">◌</div>
-        <div>
-          <h3 class="nt-explorer__card-title">Mode hors réseau</h3>
-          <p class="nt-explorer__card-text">Préparez vos sorties et consultez vos repères même sans réseau.</p>
-        </div>
-      </article>
-    </div>
 
+      <article class="nt-explorer-card">
+        <div class="nt-explorer-card__media">
+          <img src="./assets/explorer-cards/points-interet.jpg" alt="Point d'intérêt naturel ou patrimonial à découvrir" loading="lazy" />
+        </div>
+        <div class="nt-explorer-card__body">
+          <h3 class="nt-explorer-card__title">Points d'intérêt</h3>
+          <p class="nt-explorer-card__text">Repérez les lieux à découvrir autour de vous.</p>
+        </div>
+      </article>
+
+      <article class="nt-explorer-card">
+        <div class="nt-explorer-card__media">
+          <img src="./assets/explorer-cards/chemins-acces.jpg" alt="Chemin ou sentier accessible en pleine nature" loading="lazy" />
+        </div>
+        <div class="nt-explorer-card__body">
+          <h3 class="nt-explorer-card__title">Chemins &amp; accès</h3>
+          <p class="nt-explorer-card__text">Visualisez sentiers, routes et passages utiles.</p>
+        </div>
+      </article>
+
+      <article class="nt-explorer-card">
+        <div class="nt-explorer-card__media">
+          <img src="./assets/explorer-cards/zones-sensibles.jpg" alt="Zone naturelle sensible ou protégée" loading="lazy" />
+        </div>
+        <div class="nt-explorer-card__body">
+          <h3 class="nt-explorer-card__title">Zones sensibles</h3>
+          <p class="nt-explorer-card__text">Identifiez les secteurs à connaître avant de partir.</p>
+        </div>
+      </article>
+
+      <article class="nt-explorer-card">
+        <div class="nt-explorer-card__media">
+          <img src="./assets/explorer-cards/itineraires-multi-activites.jpg" alt="Itinéraire outdoor adapté à plusieurs pratiques" loading="lazy" />
+        </div>
+        <div class="nt-explorer-card__body">
+          <h3 class="nt-explorer-card__title">Itinéraires multi-activités</h3>
+          <p class="nt-explorer-card__text">Créez des parcours adaptés à votre pratique : rando, trail, VTT, équitation...</p>
+        </div>
+      </article>
+
+      <article class="nt-explorer-card">
+        <div class="nt-explorer-card__media">
+          <img src="./assets/explorer-cards/carte-enrichie.jpg" alt="Carte enrichie consultée en extérieur" loading="lazy" />
+        </div>
+        <div class="nt-explorer-card__body">
+          <h3 class="nt-explorer-card__title">Carte enrichie</h3>
+          <p class="nt-explorer-card__text">Toutes les informations utiles réunies au même endroit.</p>
+        </div>
+      </article>
+
+      <article class="nt-explorer-card">
+        <div class="nt-explorer-card__media">
+          <img src="./assets/explorer-cards/mode-hors-reseau.jpg" alt="Utilisation d'une carte hors réseau en extérieur" loading="lazy" />
+        </div>
+        <div class="nt-explorer-card__body">
+          <h3 class="nt-explorer-card__title">Mode hors réseau</h3>
+          <p class="nt-explorer-card__text">Préparez vos sorties et consultez vos repères même sans réseau.</p>
+        </div>
+      </article>
+
+    </div>
   </div>
+</section>
+
+
+<!-- ============================================================
+     EXPLORER — visuel forêt + iPhone
+     ============================================================ -->
+<section class="nt-explorer-visual" aria-label="Aperçu de l'application Naterra">
+  <img
+    class="nt-explorer-visual__phone"
+    src="./assets/explorer-iphone.png"
+    alt="Capture de l'application Naterra montrant une carte enrichie avec itinéraire et points d'intérêt"
+  />
 </section>
 
 

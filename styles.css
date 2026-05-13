@@ -612,141 +612,146 @@ button {
 /* ================================================================
    SECTION EXPLORER
    ================================================================ */
+/* ================================================================
+   EXPLORER — intro + 6 cards
+   ================================================================ */
 .nt-explorer {
-  position: relative;
-  overflow: hidden;
-  padding: 88px 0 72px;
-}
-
-/* Fond — gradient fallback propre.
-   Pour activer explorer-background.jpg dès qu'il est disponible,
-   décommenter les trois lignes suivantes dans .nt-explorer__background : */
-.nt-explorer__background {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  /* background-image: url('./assets/explorer-background.jpg'); */
-  /* background-size: cover; */
-  /* background-position: center; */
-  background: linear-gradient(175deg, #eef2ec 0%, #e4ebe1 55%, #dde6da 100%);
-}
-
-.nt-explorer__inner {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* En-tête centré */
-.nt-explorer__header {
-  text-align: center;
-  max-width: 680px;
-  margin-bottom: 48px;
-}
-
-.nt-section-logo {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--nt-green);
-  margin-bottom: 10px;
-}
-
-.nt-explorer__title {
-  font-size: clamp(38px, 6vw, 60px);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  color: var(--nt-black);
-  margin-bottom: 12px;
-}
-
-.nt-explorer__subtitle {
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--nt-green);
-  margin-bottom: 14px;
+  background: #f4f6f3;
+  padding: 96px 0 80px;
 }
 
 .nt-explorer__intro {
-  font-size: 15px;
+  max-width: 1060px;
+  text-align: center;
+}
+
+.nt-explorer__eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--nt-green);
+  margin-bottom: 18px;
+}
+
+.nt-explorer__title {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  color: var(--nt-black);
+  margin-bottom: 20px;
+}
+
+.nt-explorer__text {
+  font-size: 16px;
   line-height: 1.7;
   color: var(--nt-gray);
+  max-width: 680px;
   margin: 0 auto;
-  max-width: 520px;
 }
 
-/* iPhone centré */
-.nt-explorer__phone-wrap {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 48px;
-}
-
-.nt-explorer__phone {
-  width: min(320px, 86vw);
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 24px 48px rgba(0,0,0,0.16));
-}
-
-/* 6 boîtes */
 .nt-explorer__cards {
-  width: 100%;
-  max-width: 900px;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
+  gap: 18px;
+  margin-top: 52px;
 }
 
-.nt-explorer__card {
-  background: rgba(255,255,255,0.90);
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: var(--r-lg);
-  padding: 16px 18px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+.nt-explorer-card {
+  overflow: hidden;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.88);
+  border: 1px solid rgba(18,53,31,0.10);
+  box-shadow: 0 22px 60px rgba(5,8,7,0.10);
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  transition: box-shadow 0.14s;
+  flex-direction: column;
+  min-height: 360px;
+  transition: box-shadow 0.18s, transform 0.18s;
 }
-.nt-explorer__card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.10); }
+.nt-explorer-card:hover {
+  box-shadow: 0 28px 72px rgba(5,8,7,0.15);
+  transform: translateY(-3px);
+}
 
-.nt-explorer__card-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
+.nt-explorer-card__media {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+  background: #d4dbd2;
+  flex-shrink: 0;
+}
+.nt-explorer-card__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5,8,7,0.02) 0%, rgba(5,8,7,0.18) 100%);
+  pointer-events: none;
+}
+.nt-explorer-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
+
+.nt-explorer-card__body {
+  padding: 26px 26px 30px;
+  flex: 1;
+}
+
+.nt-explorer-card__title {
+  margin: 0 0 10px;
+  color: var(--nt-black);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.nt-explorer-card__text {
+  margin: 0;
+  color: var(--nt-gray);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* ================================================================
+   EXPLORER VISUAL — forêt + iPhone
+   ================================================================ */
+.nt-explorer-visual {
+  position: relative;
+  min-height: 780px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
-  flex-shrink: 0;
-}
-.nt-explorer__card-icon--green { background: var(--nt-green-dim); color: var(--nt-green); }
-.nt-explorer__card-icon--amber { background: var(--nt-amber-dim); color: var(--nt-amber); }
-.nt-explorer__card-icon--blue  { background: var(--nt-blue-dim);  color: var(--nt-blue); }
-.nt-explorer__card-icon--gray  { background: rgba(0,0,0,0.05);    color: var(--nt-gray); }
-
-.nt-explorer__card-title {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--nt-black);
-  letter-spacing: -0.01em;
-  margin-bottom: 3px;
+  overflow: hidden;
+  background-image: url("./assets/explorer-forest.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-.nt-explorer__card-text {
-  font-size: 13px;
-  line-height: 1.55;
-  color: var(--nt-gray);
-  margin: 0;
+.nt-explorer-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(244,246,243,0.20) 0%,
+    rgba(244,246,243,0.08) 45%,
+    rgba(244,246,243,0.18) 100%
+  );
+  z-index: 0;
+}
+
+.nt-explorer-visual__phone {
+  position: relative;
+  z-index: 1;
+  width: min(360px, 78vw);
+  max-height: 86%;
+  object-fit: contain;
+  filter: drop-shadow(0 28px 60px rgba(0,0,0,0.35));
 }
 
 /* ================================================================
@@ -1131,7 +1136,15 @@ button {
 /* ================================================================
    RESPONSIVE — tablette 640px+
    ================================================================ */
+@media (max-width: 480px) {
+  .nt-explorer-visual { min-height: 620px; }
+  .nt-explorer-visual__phone { width: min(310px, 84vw); }
+  .nt-explorer-card__media { height: 190px; }
+}
+
 @media (min-width: 640px) {
+  .nt-explorer__cards { grid-template-columns: repeat(2, 1fr); }
+
   .nt-signal-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1150,9 +1163,8 @@ button {
     min-height: calc(90vh - var(--header-h));
   }
 
-  /* Explorer : iPhone plus grand sur desktop */
-  .nt-explorer__phone { width: min(380px, 55vw); }
-  .nt-explorer__cards { grid-template-columns: 1fr 1fr; }
+  /* Explorer visual */
+  .nt-explorer-visual__phone { width: 410px; }
 
   /* Aligner le début du carousel avec le container sur grand écran */
   .practice-carousel {
@@ -1189,7 +1201,6 @@ button {
   .nt-map__ring--2 { width: 216px; height: 178px; }
   .nt-map__ring--3 { width: 120px; height: 98px; }
 
-  /* Explorer : grille 3 colonnes sur grand écran */
-  .nt-explorer__phone { width: 400px; }
+  /* Explorer */
   .nt-explorer__cards { grid-template-columns: repeat(3, 1fr); }
 }
