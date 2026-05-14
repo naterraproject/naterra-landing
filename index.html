@@ -359,7 +359,7 @@
           <p class="nt-app-card__text">Créez, organisez et partagez un territoire lisible avec ses zones, accès, points clés et informations terrain.</p>
         </div>
       </article>
-x
+
       <article class="nt-app-card">
         <div class="nt-app-card__image-wrap">
           <img class="nt-app-card__image" src="./assets/screens/patrimoine-decouvertes.png" alt="Patrimoine et découvertes Naterra" loading="lazy" />
@@ -370,6 +370,15 @@ x
         </div>
       </article>
 
+    </div>
+    <div class="nt-app-carousel__dots" aria-label="Navigation des fonctionnalités">
+      <button type="button" class="is-active" aria-label="Voir la fonctionnalité 1"></button>
+      <button type="button" aria-label="Voir la fonctionnalité 2"></button>
+      <button type="button" aria-label="Voir la fonctionnalité 3"></button>
+      <button type="button" aria-label="Voir la fonctionnalité 4"></button>
+      <button type="button" aria-label="Voir la fonctionnalité 5"></button>
+      <button type="button" aria-label="Voir la fonctionnalité 6"></button>
+      <button type="button" aria-label="Voir la fonctionnalité 7"></button>
     </div>
   </div>
 </section>
@@ -415,6 +424,42 @@ x
     </div>
   </div>
 </footer>
+
+<script>
+(function () {
+  var carousel = document.querySelector('.nt-app-carousel');
+  if (!carousel) return;
+  var cards = Array.prototype.slice.call(carousel.querySelectorAll('.nt-app-card'));
+  var dots  = Array.prototype.slice.call(document.querySelectorAll('.nt-app-carousel__dots button'));
+  if (!cards.length || !dots.length) return;
+
+  function setActive(i) {
+    dots.forEach(function (d, idx) { d.classList.toggle('is-active', idx === i); });
+  }
+
+  function updateActive() {
+    var cr = carousel.getBoundingClientRect();
+    var cx = cr.left + cr.width / 2;
+    var best = 0, bestDist = Infinity;
+    cards.forEach(function (card, i) {
+      var r = card.getBoundingClientRect();
+      var dist = Math.abs(r.left + r.width / 2 - cx);
+      if (dist < bestDist) { bestDist = dist; best = i; }
+    });
+    setActive(best);
+  }
+
+  carousel.addEventListener('scroll', updateActive, { passive: true });
+
+  dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () {
+      var r = cards[i].getBoundingClientRect();
+      var cr = carousel.getBoundingClientRect();
+      carousel.scrollBy({ left: r.left - cr.left, behavior: 'smooth' });
+    });
+  });
+})();
+</script>
 
 </body>
 </html>

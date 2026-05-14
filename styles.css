@@ -1043,16 +1043,34 @@ button {
   scroll-snap-type: x mandatory;
   gap: 20px;
   padding-bottom: 24px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,0.14) transparent;
+  scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
 }
+.nt-app-carousel::-webkit-scrollbar { display: none; }
 
-.nt-app-carousel::-webkit-scrollbar { height: 3px; }
-.nt-app-carousel::-webkit-scrollbar-track { background: transparent; }
-.nt-app-carousel::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.14);
-  border-radius: 2px;
+.nt-app-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+.nt-app-carousel__dots button {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.28);
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s, width 0.2s;
+}
+.nt-app-carousel__dots button.is-active {
+  width: 20px;
+  background: #28e20f;
+}
+.nt-app-carousel__dots button:focus-visible {
+  outline: 2px solid rgba(40,226,15,0.80);
+  outline-offset: 2px;
 }
 
 .nt-app-card {
