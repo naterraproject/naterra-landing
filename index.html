@@ -6,6 +6,7 @@
   <meta name="description" content="Explorer, pratiquer, signaler. Les bonnes informations, au bon endroit, au bon moment." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" type="image/png" href="./assets/20260316_Logo%20Green_No%20Text.png" />
 </head>
 <body>
 
@@ -50,7 +51,7 @@
           TODO: Remplacer href="#" par le lien TestFlight iOS
           Format attendu : https://testflight.apple.com/join/XXXXXXXX
         -->
-        <a href="https://testflight.apple.com/v1/app/6757225894?build=210567664" class="nt-btn nt-btn--green nt-btn--lg" target="_blank" rel="noopener noreferrer">Tester l'app sur TestFlight</a>
+        <a href="https://testflight.apple.com/v1/app/6757225894?build=210567664" class="nt-btn nt-btn--green nt-btn--lg" target="_blank" rel="noopener noreferrer">Tester l'app sur iPhone</a>
       </div>
     </div>
 
@@ -382,7 +383,7 @@ x
     <h2 class="nt-download__title">Prendre en main Naterra</h2>
     <p class="nt-download__body">Naterra est actuellement en bêta terrain. Installez l'app: explorez, pratiquez, signalez.</p>
     <div class="nt-download__actions">
-      <a href="https://testflight.apple.com/v1/app/6757225894?build=210567664" class="nt-btn nt-btn--green nt-btn--lg" target="_blank" rel="noopener noreferrer">Tester l'app sur TestFlight</a>
+      <a href="https://testflight.apple.com/v1/app/6757225894?build=210567664" class="nt-btn nt-btn--green nt-btn--lg" target="_blank" rel="noopener noreferrer">Tester l'app sur iPhone</a>
       <!-- Android : disponible prochainement
       <button class="nt-btn nt-btn--outline-white nt-btn--lg" disabled aria-disabled="true">Android bientôt disponible</button>
       -->
@@ -401,21 +402,18 @@ x
     <div class="nt-footer__left">
       <span class="nt-footer__brand">Naterra</span>
       <a href="mailto:contact@naterra.app" class="nt-footer__email">contact@naterra.app</a>
+      <p class="nt-footer__copy">© 2026 Naterra</p>
     </div>
     <div class="nt-footer__right">
       <nav class="nt-footer__nav">
-        <a href="#" class="nt-footer__link">CGU</a>
+        <a href="./cgu.html" class="nt-footer__link">CGU</a>
+        <a href="./politique-confidentialite.html" class="nt-footer__link">Politique de confidentialité</a>
         <a href="#" class="nt-footer__link">Mentions légales</a>
         <a href="mailto:contact@naterra.app" class="nt-footer__link">Contact</a>
       </nav>
       <p class="nt-footer__mention">Vos données terrain restent protégées. Naterra privilégie l'information utile, contextualisée et maîtrisée.</p>
-      <p class="nt-footer__copy">© <span id="nt-year"></span> Naterra</p>
     </div>
   </div>
-  <script>
-    const el = document.getElementById('nt-year');
-    if (el) el.textContent = new Date().getFullYear();
-  </script>
 </footer>
 
 </body>
